@@ -1,7 +1,2 @@
-header {
-    border: black 1px solid;
-}
+@import "css/global.css";
 
-body {
-    border-bottom: black 1px solid;
-}
