@@ -1,7 +1,24 @@
 /* Menu top bar*/
-.menu-top {
+.banner {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
     background-color: #333030;
+}
+
+.menu-top {
+    width: 35%;
+}
+
+.dokan-logo {
+    display: flex;
+    color: black;
+    background-color: white;
+    width: 50px;
     height: 50px;
+    border-radius: 50% 50%;
+    align-items: center;
+    justify-content: center;
 }
 
 ul {
