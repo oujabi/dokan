@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding: 5px 5px;
     background-color: #333030;
+    border-radius: 0 0 10px 10px;
 }
 
 .menu-top {
@@ -38,7 +39,7 @@ body {
 
 header {
     margin-bottom: 30px;
-    border: white 1px solid;
+    border-bottom: #B8221C 1px solid;
     color: white;
 }
 
