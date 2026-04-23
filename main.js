@@ -1,5 +1,5 @@
 'use strict'
 
-import * as Global from './js/global';
+import './js/global.js';
 
-console.log("JS link")
+console.log("JS link");
