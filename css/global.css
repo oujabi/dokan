@@ -2,7 +2,7 @@
 .banner {
     display: flex;
     justify-content: space-between;
-    padding: 5px 5px;
+    padding: 13px 30px;
     background-color: #333030;
     border-radius: 0 0 10px 10px;
 }
@@ -15,11 +15,15 @@
     display: flex;
     color: black;
     background-color: white;
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
     border-radius: 50% 50%;
     align-items: center;
     justify-content: center;
+}
+
+.dokan-logo > span {
+    font-size: 13px;
 }
 
 ul {
@@ -28,18 +32,50 @@ ul {
     align-items: center;
 }
 
-body {
-    background-color: black;
-}
-
 header {
     margin-bottom: 30px;
     border-bottom: #B8221C 1px solid;
     color: white;
 }
 
-main {
-    border: white 1px solid;
-    color: white;
+body {
+    background-image:
+            linear-gradient(#332e2e),
+            url("./../assets/dojo-aikido.png");
+    background-size: cover;
+    background-blend-mode: hard-light;
 }
 
+button {
+    display: flex;
+    position: absolute;
+    background-color: #333030;
+    bottom: 15%;
+    left: 50%;
+    width: 90px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border-top: solid #E99800 2px;
+    border-bottom: #E99800 2px solid;
+    color: whitesmoke;
+}
+
+.citation-landing-page {
+    position: absolute;
+    color: #E99800;
+    left: 8rem;
+    top: 30%;
+    font-size: 22px;
+}
+
+.citation-landing-page > p {
+    margin-bottom: 25px;
+}
+
+.citation-landing-page > span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
