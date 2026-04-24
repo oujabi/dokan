@@ -1,7 +1,5 @@
 {
-  "type": "module",
   "dependencies": {
     "the-new-css-reset": "^1.11.3"
-
   }
 }
