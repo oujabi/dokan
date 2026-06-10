@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+<rect width="200" height="80" fill="#ffffff" stroke="#000000" stroke-width="2" rx="5"/>
+<rect x="0" y="0" width="60" height="80" fill="#0055A4"/>
+<rect x="60" y="0" width="80" height="80" fill="#FFFFFF"/>
+<rect x="140" y="0" width="60" height="80" fill="#EF4135"/>
+<text x="100" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#000000" text-anchor="middle">JOUÉ-LÈS-TOURS</text>
+<text x="100" y="55" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">Ville de France</text>
+</svg>
