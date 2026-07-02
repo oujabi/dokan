@@ -1,15 +1,546 @@
-body {
-    background-color: black;
+@font-face {
+    font-family: 'Junge';
+    src:
+        local('Junge'),
+        url('./../fonts/Junge-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:
+            local('Roboto'),
+            url('./../fonts/Roboto-Regular.ttf');
+}
+/*Unreset*/
+hr {
+    all: revert;
+}
+
+/*Global design*/
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Junge', cursive;
+    font-weight: bold;
+}
+
+h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Junge', cursive;
+    font-weight: 800;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+
+/* Menu top bar*/
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 30px;
+    background-color: #333030;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 9px 20px #2B0B0B;
+    height: 65px;
+    top: 10px;
+}
+
+.menu-top {
+    width: 35%;
+}
+
+.dokan-logo {
+    display: flex;
+    color: black;
+    background-color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 50% 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.dokan-logo > span {
+    font-size: 13px;
 }
 
 header {
     margin-bottom: 30px;
-    border: white 1px solid;
+    border-bottom: #B8221C 1px solid;
     color: white;
 }
 
-main {
-    border: white 1px solid;
-    color: white;
+.body-landing-page {
+    background-image:
+            linear-gradient(#332e2e),
+            url("./../assets/dojo-aikido.png");
+    background-size: cover;
+    background-blend-mode: hard-light;
 }
 
+button {
+    display: flex;
+    position: absolute;
+    background-color: #333030;
+    bottom: 15%;
+    left: 50%;
+    width: 90px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border-top: solid #E99800 2px;
+    border-bottom: #E99800 2px solid;
+    color: #F4F0F0FF;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #E99800;
+    border-top: solid #333030 2px;
+    border-bottom: #333030 2px solid;
+    border-radius: 6px;
+    color: #333030;
+}
+
+.citation-landing-page {
+    position: absolute;
+    color: #E99800;
+    left: 8rem;
+    top: 30%;
+    font-size: 22px;
+}
+
+.citation-landing-page > span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.body-dokan-intro {
+    background-color: #edece1;
+}
+
+h1 {
+    font-family: 'Junge', cursive;
+    color: #B8221C;
+    font-size: 50px;
+    text-align: center;
+}
+
+.large-hr {
+    display: block;
+    width: 80%;
+    background-color: #B8221C;
+    height: 3px;
+    box-shadow: 8px 5px 10px #5a5252b3;
+    border: none;
+}
+
+.small-hr-left {
+    display: block;
+    position: relative;
+    right: 23%;
+    bottom: 15px;
+    width: 33%;
+    background-color: #B8221C;
+    height: 3px;
+    box-shadow: 8px 5px 10px #5a5252b3;
+    border: none;
+}
+
+.small-hr-right {
+    display: block;
+    position: relative;
+    left: 23%;
+    bottom: 15px;
+    width: 33%;
+    background-color: #B8221C;
+    height: 3px;
+    box-shadow: 8px 5px 10px #5a5252b3;
+    border: none;
+}
+
+.block-text-img-right {
+    display: flex;
+    position: relative;
+    left: 10%;
+    width: 80%;
+    padding: 0.5rem;
+}
+
+.block-text-img-left {
+    display: flex;
+    position: relative;
+    left: 10%;
+    width: 80%;
+    padding: 0.5rem;
+}
+.block-text-img-right > .block-title-text {
+    width: 40%;
+    margin-right: 4%;
+}
+
+.block-text-img-left > .block-title-text {
+    order: 2;
+}
+
+.block-text-img-left > .illustration {
+    order: 1;
+}
+
+.block-text-img-left > .block-title-text {
+    width: 40%;
+    margin-left: 4%;
+}
+
+.block-title-text > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+.illustration {
+    width: 57%;
+}
+
+.block-list-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 3%;
+}
+
+.block-filiation-wrapper, .block-equipe-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 22%;
+    padding: 1%;
+    border: solid black 1px;
+    border-radius: 10px;
+    height: 290px;
+    background: #fbfbfb;
+    margin-top: 10px;
+    margin-right: 2rem;
+}
+
+.card:nth-child(1n+5) {
+    margin-top: 40px;
+}
+
+.portrait {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #D9D9D9;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    bottom: 33px;
+    left: 38%;
+}
+
+.text-portrait {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.block-equipe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block-equipe-item > img {
+    position: relative;
+    top: 40px;
+    width: 35%;
+}
+
+.header-stage-card {
+    display: flex;
+    justify-content: center;
+}
+
+.header-stage-card hr {
+    width: 70px;
+    border: solid black 1px;
+}
+
+.block-header-stage-card {
+    margin: 0 10px;
+}
+
+.block-header-stage-card h3 {
+    font-weight: bold;
+}
+
+.block-list-card-stage {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 3%;
+    flex-wrap: wrap;
+}
+
+.stage-saison-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    box-shadow: 8px 5px 10px #5a5252b3;
+}
+
+
+.stage-saison-card img {
+    display: block;
+    border: solid black 1px;
+}
+
+.stage-city-name {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    top: 20px;
+}
+
+.header-block-medias {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: #D9D9D9;
+    border-bottom: solid black 1px;
+    font-weight: 800;
+}
+
+.header-block-medias > h2 {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+}
+
+.block-list-card-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.block-list-card-media .card {
+    margin: 10px;
+    padding: 0;
+}
+
+.formulaire-inscription {
+    display: flex;
+    justify-content: center;
+
+}
+
+.wrapper-form-inscription {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper-form-inscription input {
+    border: solid #a3a3a3 1px;
+    height: 30px;
+    background-color: white;
+}
+
+.wrapper-form-inscription textarea {
+    width: 100%;
+    border: solid #a3a3a3 1px;
+    background-color: white;
+
+
+}
+
+.wrapper-form-inscription input:hover, .wrapper-form-inscription textarea:hover {
+    border: solid #B8221C 2px;
+    background-color: white;
+}
+
+.wrapper-form-inscription input:focus, .wrapper-form-inscription textarea:focus {
+    border: solid #B8221C 2px;
+    background-color: white;
+    box-shadow: 8px 5px 10px #5a5252b3;
+
+}
+
+.wrapper-form-inscription input:not(:placeholder-shown) {
+    box-shadow: 8px 5px 10px #5a5252b3;
+    border: solid #2cb81c 1px;
+
+}
+
+/*.wrapper-form-inscription textarea:not(:placeholder-shown) {*/
+/*    box-shadow: 8px 5px 10px #5a5252b3;*/
+/*    border: solid #2cb81c 1px;*/
+/*}*/
+
+
+
+label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-section:nth-child(1) {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.form-section:nth-child(2), .form-section:nth-child(3), .form-section:nth-child(4) {
+    width: 30%;
+}
+
+.form-section:nth-child(2) input, .form-section:nth-child(3) textarea {
+    width: 100%;
+}
+
+.form-section:nth-child(4) input[type="submit"]{
+    width: 30%;
+    height: 35px;
+    text-align: center;
+    margin-left: 70%;
+    font-weight: bold;
+    color: #b8221c;
+    border: solid #B8221C 1px;
+    background: white;
+    box-shadow: 8px 5px 10px #5a5252b3;
+
+
+}
+
+.form-section:nth-child(4) input[type="submit"]:hover {
+    color: white;
+    background-color: #B8221C;
+    box-shadow: none;
+}
+
+.form-section:nth-child(3) textarea {
+    height: 130px;
+}
+
+input[type="submit"] {
+    position: relative;
+    left: 0;
+}
+
+.active {
+    position: relative;
+    width: 82px;
+    top: 10px;
+    height: 48px;
+    /*background: #b8221cdb;*/
+    background: rgb(184 34 28 / 0.8);
+    text-align: center;
+    border-bottom: solid 3px #333030;
+    border-radius: 15px 15px 0 0;
+    padding-top: 6px;
+    /*color: #f8b289;*/
+    color: whitesmoke;
+    font-weight: 400;
+}
+
+.active > a {
+    pointer-events: none;
+}
+
+.not-active:hover{
+    position: relative;
+    width: 82px;
+    top: 10px;
+    color: rgb(213 53 46 / 0.86);
+    height: 48px;
+    /*background: #E99800;*/
+    text-align: center;
+    /*border-bottom: solid 3px #333030;*/
+    border-radius: 15px 15px 0 0;
+    padding-top: 6px;
+    /*color: white;*/
+    /*border: solid #E99800 1px;*/
+    border: solid #b8221cdb 1px;
+    border-bottom: solid 3px #333030;
+    font-weight: bold;
+}
+
+/*.menu-top li:nth-child(2){*/
+/*    position: relative;*/
+/*    width: 80px;*/
+/*    top: 12px;*/
+/*    height: 43px;*/
+/*    background: rgb(232 125 124 / 0.39);*/
+/*    text-align: center;*/
+/*    border-bottom: solid 3px #333030;*/
+/*    border-radius: 10px 10px 0 0;*/
+/*    padding-top: 2px;*/
+/*}*/
+
+.info-pratique-main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.info-pratique-main .wrapper-info-pratique {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-pratique-main .wrapper-info-pratique .block-infos-pratiques{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.block-logo-reseau {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.reseaux-sociaux {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block-partenaires-presentation {
+    display: flex;
+}
