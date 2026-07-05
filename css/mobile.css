@@ -1,0 +1,7 @@
+/* menu-nav */
+
+/* Disable desktop menu-nav to replace by mobile menu-nav */
+.menu-top {
+    display: none;
+}
+
