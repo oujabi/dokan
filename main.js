@@ -1,6 +1,4 @@
 'use strict';
+import createNav from "./js/navbar.js";
 
-import './js/global.js';
-
-
-console.log("JS link");
+document.body.prepend(createNav());

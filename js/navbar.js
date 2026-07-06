@@ -1,27 +1,30 @@
-import navData from './../json/datasOfNav.json' with { type: 'json' };
+import navData from '../data/nav.js';
+import assetsData from '../data/assets.js';
 
 function createNav() {
     const headerElement = document.createElement('header');
-    const logoElement = document.createElement('img');
     const navElement = document.createElement('nav');
-
     const ulElement = createListOfLinks();
 
-    headerElement.append(logoElement, navElement.appendChild(ulElement), );
+    headerElement.classList.add('banner');
 
-    return navElement.appendChild(ulElement);
+    headerElement.append(createLogo(), navElement.appendChild(ulElement));
+
+    return headerElement;
 }
-
 export default createNav;
 
 function createListOfLinks() {
     const ulElement = document.createElement('ul');
+
+    ulElement.classList.add('menu-top');
 
     for (const key in navData) {
         const item = navData[key];
         const liElement = document.createElement('li');
         const aElement = document.createElement('a');
 
+        liElement.classList.add('not-active');
         aElement.href = item.href;
         aElement.textContent = item.name;
 
@@ -32,5 +35,19 @@ function createListOfLinks() {
     return ulElement;
 }
 
-function createLogo() {}
+function createLogo() {
+    const logoElement = document.createElement('div');
+    const spanElement = document.createElement('span');
+    const aElement = document.createElement('a');
+
+    logoElement.classList.add('dokan-logo');
+    aElement.textContent = assetsData.logo.name;
+    aElement.href = assetsData.logo.href;
+    aElement.alt = assetsData.logo.alt;
+
+    spanElement.appendChild(aElement);
+    logoElement.appendChild(spanElement);
+
+    return logoElement;
+}
 
