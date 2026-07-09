@@ -24,8 +24,12 @@
         margin: 3px auto;
     }
 
-    .nav-list {
+    .disabled {
         display: none;
+    }
+
+    .enabled {
+        display: block;
     }
 
     .banner {

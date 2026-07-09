@@ -12,6 +12,13 @@
             url('./../fonts/Roboto-Regular.ttf');
 }
 
+:root {
+    --budo-red: #B8221C;
+    --dark-bg-nav: #333030;
+    --shadow-bg-nav: #2B0B0B;
+    --ancient-paper-white: #edece1;
+}
+
 /*Unreset*/
 hr {
     all: revert;
@@ -50,9 +57,9 @@ hr {
     display: flex;
     justify-content: space-between;
     padding: 13px 30px;
-    background-color: #333030;
+    background-color: var(--dark-bg-nav);
     border-radius: 0 0 10px 10px;
-    box-shadow: 0 9px 20px #2B0B0B;
+    box-shadow: 0 9px 20px var(--shadow-bg-nav);
     height: 65px;
     align-items: center;
 }
@@ -63,8 +70,8 @@ hr {
 
 .dokan-logo {
     display: flex;
-    color: black;
-    background-color: white;
+    color: var(--dark-bg-nav);
+    background-color: var(--ancient-paper-white);
     width: 42px;
     height: 42px;
     border-radius: 50% 50%;
@@ -78,7 +85,7 @@ hr {
 
 header {
     margin-bottom: 30px;
-    border-bottom: #B8221C 1px solid;
+    border-bottom: var(--budo-red) 1px solid;
     color: white;
 }
 
@@ -468,14 +475,9 @@ input[type="submit"] {
     width: 82px;
     top: 10px;
     height: 48px;
-    /*background: #b8221cdb;*/
-    background: rgb(184 34 28 / 0.8);
     text-align: center;
-    border-bottom: solid 3px #333030;
-    border-radius: 15px 15px 0 0;
     padding-top: 6px;
-    /*color: #f8b289;*/
-    color: whitesmoke;
+    color: rgb(213 53 46 / 0.86);
     font-weight: 400;
 }
 
@@ -489,29 +491,10 @@ input[type="submit"] {
     top: 10px;
     color: rgb(213 53 46 / 0.86);
     height: 48px;
-    /*background: #E99800;*/
     text-align: center;
-    /*border-bottom: solid 3px #333030;*/
-    border-radius: 15px 15px 0 0;
     padding-top: 6px;
-    /*color: white;*/
-    /*border: solid #E99800 1px;*/
-    border: solid #b8221cdb 1px;
-    border-bottom: solid 3px #333030;
     font-weight: bold;
 }
-
-/*.menu-top li:nth-child(2){*/
-/*    position: relative;*/
-/*    width: 80px;*/
-/*    top: 12px;*/
-/*    height: 43px;*/
-/*    background: rgb(232 125 124 / 0.39);*/
-/*    text-align: center;*/
-/*    border-bottom: solid 3px #333030;*/
-/*    border-radius: 10px 10px 0 0;*/
-/*    padding-top: 2px;*/
-/*}*/
 
 .info-pratique-main {
     width: 80%;

@@ -1,5 +1,5 @@
-import navData from '../data/nav.js';
-import assetsData from '../data/assets.js';
+import navData from '../../data/nav.js';
+import assetsData from '../../data/assets.js';
 
 function createNav() {
     const headerElement = document.createElement('header');
@@ -43,7 +43,7 @@ function createListOfLinks() {
 function createBurgerMenu(nav, ul) {
     let divBurgerStroke = document.createElement('div');
 
-    ul.classList.add('burger-menu-list');
+    ul.classList.add('burger-menu-list', 'disabled');
     divBurgerStroke.classList.add('burger-menu');
 
     for (let i=0; i<3; i++) {

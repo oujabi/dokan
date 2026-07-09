@@ -20,7 +20,7 @@ dokan/
 │   └── tablet.css            # VIDE
 │
 ├── js/
-│   └── global.js             # VIDE
+│   └── eventNav.js             # VIDE
 │
 ├── pages/
 │   ├── dokan-intro.html      # Presentation du club (complet)
@@ -54,7 +54,7 @@ dokan/
 | Severite | Probleme | Impact | Fichiers concerns |
 |----------|----------|--------|-------------------|
 | BLOCAGE | Fichiers CSS responsive VIDES (mobile.css, tablet.css, desktop.css) | Aucun design adaptatif - Site illisible sur mobile/tablette. | css/* |
-| BLOCAGE | global.js VIDE mais importe dans main.js | Aucune fonctionnalite JS, mais script charge inutilement. | js/global.js, main.js |
+| BLOCAGE | eventNav.js VIDE mais importe dans main.js | Aucune fonctionnalite JS, mais script charge inutilement. | js/eventNav.js, main.js |
 | BLOCAGE | Pages VIDES (inscription.html, info-pratique.html) | Contenu manquant, liens brises dans le menu. | pages/inscription.html, pages/info-pratique.html |
 | MOYEN | Images non optimisees (ex: affiche-stage-*.jpg > 1Mo) | Temps de chargement long, SEO penalise. | assets/* |
 | MOYEN | alt="" VIDE pour toutes les images dans medias.html | Accessibilite : lecteurs d'ecran inefficaces. | pages/medias.html |
@@ -103,7 +103,7 @@ dokan/
 - inscription.html : Ajouter un formulaire (ou lien vers un formulaire externe).
 - info-pratique.html : Ajouter horaires, adresse, tarifs, contact.
 
-**3. Corriger global.js**
+**3. Corriger eventNav.js**
 - Soit le supprimer, soit y ajouter du code utile (ex: gestion du menu mobile).
 
 ---
@@ -214,7 +214,7 @@ dokan/
 
 | Phase | Duree | Taches | Livrable |
 |-------|-------|--------|----------|
-| 1. Urgent | 1-2 jours | Responsive Design + Pages vides + global.js | Site fonctionnel sur mobile. |
+| 1. Urgent | 1-2 jours | Responsive Design + Pages vides + eventNav.js | Site fonctionnel sur mobile. |
 | 2. Optimisation | 2-3 jours | Images + Meta tags + Accessibilite | Score Lighthouse >70. |
 | 3. Qualite | 1-2 jours | Linter + Template HTML + Favicon | Code propre et maintenable. |
 | 4. Bonus | 1 semaine | Build system + Tests + README | Projet professionnel. |
