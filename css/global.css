@@ -54,6 +54,7 @@ hr {
     border-radius: 0 0 10px 10px;
     box-shadow: 0 9px 20px #2B0B0B;
     height: 65px;
+    align-items: center;
 }
 
 .menu-top {
