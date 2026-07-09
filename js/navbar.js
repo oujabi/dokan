@@ -3,13 +3,18 @@ import assetsData from '../data/assets.js';
 
 function createNav() {
     const headerElement = document.createElement('header');
-    const navElement = document.createElement('nav');
-    const ulElement = createListOfLinks();
+    let navElement = document.createElement('nav');
+    let ulElement = createListOfLinks();
 
     headerElement.classList.add('banner');
 
-    headerElement.append(createLogo(), navElement.appendChild(ulElement));
+    if (screen.width < 1024) {
+        navElement = createBurgerMenu(navElement, ulElement)
+    } else {
+        navElement = createClassicMenu(navElement, ulElement);
+    }
 
+    headerElement.append(createLogo(), navElement);
     return headerElement;
 }
 export default createNav;
@@ -17,7 +22,7 @@ export default createNav;
 function createListOfLinks() {
     const ulElement = document.createElement('ul');
 
-    ulElement.classList.add('menu-top');
+    ulElement.classList.add('nav-list');
 
     for (const key in navData) {
         const item = navData[key];
@@ -33,6 +38,32 @@ function createListOfLinks() {
     }
 
     return ulElement;
+}
+
+function createBurgerMenu(nav, ul) {
+    let divBurgerStroke = document.createElement('div');
+
+    ul.classList.add('burger-menu-list');
+    divBurgerStroke.classList.add('burger-menu');
+
+    for (let i=0; i<3; i++) {
+        let divBurgerLine = document.createElement('div')
+
+        divBurgerLine.classList.add('burger-menu-line');
+
+        divBurgerStroke.appendChild(divBurgerLine);
+    }
+
+    nav.append(divBurgerStroke, ul);
+
+    return nav;
+}
+
+function createClassicMenu(nav, ul) {
+    nav.classList.add();
+    ul.classList.add();
+
+    return nav.appendChild(ul);
 }
 
 function createLogo() {

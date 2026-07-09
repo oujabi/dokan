@@ -1,4 +1,14 @@
 /* menu-nav */
+@media (max-width: 1024px) {
+    .burger-menu {
 
-/* Disable desktop menu-nav to replace by mobile menu-nav */
+    }
+
+    .burger-menu-icon {
+    }
+
+    .nav-list {
+        display: none;
+    }
+}
 
