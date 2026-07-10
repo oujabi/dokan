@@ -17,6 +17,8 @@
     --dark-bg-nav: #333030;
     --shadow-bg-nav: #2B0B0B;
     --ancient-paper-white: #edece1;
+    --nav-border: var(--budo-red) 1px solid;;
+    --box-shadow-nav: 0 9px 20px var(--shadow-bg-nav);
 }
 
 /*Unreset*/
@@ -57,11 +59,21 @@ hr {
     display: flex;
     justify-content: space-between;
     padding: 13px 30px;
-    background-color: var(--dark-bg-nav);
     border-radius: 0 0 10px 10px;
-    box-shadow: 0 9px 20px var(--shadow-bg-nav);
     height: 65px;
     align-items: center;
+    margin-bottom: 30px;
+    color: var(--ancient-paper-white);
+
+    background-color: var(--dark-bg-nav);
+    border-bottom: var(--budo-red) 1px solid;
+    box-shadow: var(--box-shadow-nav);
+}
+
+.banner-vanish {
+    background-color: transparent;
+    border-bottom: none;
+    box-shadow: none;
 }
 
 .menu-top {
@@ -81,12 +93,6 @@ hr {
 
 .dokan-logo > span {
     font-size: 13px;
-}
-
-header {
-    margin-bottom: 30px;
-    border-bottom: var(--budo-red) 1px solid;
-    color: white;
 }
 
 .body-landing-page {

@@ -1,12 +1,17 @@
+@import url('./global.css');
+
 /* menu-nav */
 @media (max-width: 1024px) {
+    .banner {
+        padding: 0 12px;
+    }
+
     .burger-menu {
         display: flex;
         flex-direction: column;
         justify-content: center;
         cursor: pointer;
         position: relative;
-        /*top: 3px;*/
         right: 0;
         border: solid #b8221c 2px;;
         width: 38px;
@@ -24,6 +29,17 @@
         margin: 3px auto;
     }
 
+    .burger-menu-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100vh;
+        background: var(--dark-bg-nav) ;
+        border-right: var(--nav-border);
+        padding-top: 65px;
+    }
+
     .disabled {
         display: none;
     }
@@ -32,16 +48,5 @@
         display: block;
     }
 
-    .banner {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 12px;
-        background-color: #333030;
-        border-radius: 0 0 10px 10px;
-        box-shadow: 0 9px 20px #2B0B0B;
-        height: 65px;
-        align-items: center;
-    }
 }
 
