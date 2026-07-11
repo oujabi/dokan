@@ -4,17 +4,54 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="css/landing-page.css">
         <title>Dokan, la voie de l'anneau</title>
     </head>
 
     <body class="body-landing-page">
-        /*Nav insert here*/
-        <header></header>
+        <header>
+            <div class="dokan-logo">
+                <a href="./index.html">Dokan</a>
+            </div>
 
-        /*Main data inert here*/
-        <main></main>
+            <nav>
+                <ul class="nav-list">
+                    <li>
+                        <a href="./pages/dokan-intro.html">Dokan</a>
+                    </li>
+                    <li>
+                        <a href="./pages/stage-saison.html">Stage</a>
+                    </li>
+                    <li>
+                        <a href="./pages/medias.html">Medias</a>
+                    </li>
+                    <li>
+                        <a href="./pages/inscription.html">Contacts</a>
+                    </li>
+                    <li>
+                        <a href="./pages/info-pratique.html">Info pratique</a>
+                    </li>
+                </ul>
+                <div class="burger-menu">
+                    <div class="burger-menu-line"></div>
+                    <div class="burger-menu-line"></div>
+                    <div class="burger-menu-line"></div>
+                </div>
+            </nav>
+        </header>
 
-        /*Js link here*/
+        <main>
+            <div class="citation-landing-page">
+                <p>L'Aïkidô est une voie qui permet de se découvrir soi-même et<br>
+                    De se construire en tant qu'être humain afin de vivre une vie pleine <br>
+                    et heureuse." <br>
+                </p>
+                <span>Tamura Nobuyoshi</span>
+            </div>
+
+            <button onclick="location.href='./pages/dokan-intro.html'">Enter</button>
+        </main>
+
         <footer>
             <script type="module" src="main.js"></script>
         </footer>

@@ -1,10 +1,14 @@
-@import url('./global.css');
+@import url('main.css');
 
-/* menu-nav */
+
 @media (max-width: 1024px) {
-    .banner {
-        padding: 0 12px;
+    /* ------------ navigation ------------ */
+
+    /*Menu*/
+    .nav-list {
+        display: none;
     }
+
 
     .burger-menu {
         display: flex;
@@ -13,7 +17,6 @@
         cursor: pointer;
         position: relative;
         right: 0;
-        border: solid #b8221c 2px;;
         width: 38px;
         height: 38px;
         border-radius: 5px;
@@ -33,7 +36,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 80%;
+        width: 60%;
         height: 100vh;
         background: var(--dark-bg-nav) ;
         border-right: var(--nav-border);
@@ -53,14 +56,18 @@
         border-top: none;
     }
 
-
-
     .disabled {
         display: none;
     }
 
     .enabled {
         display: block;
+    }
+
+    .banner-vanish {
+        background-color: transparent;
+        border-bottom: none;
+        box-shadow: none;
     }
 }
 
