@@ -15,5 +15,13 @@ function eventNav() {
         document.querySelector('nav ul').classList.remove("mobile-nav-list");
     })
 
+    document.querySelector("main").addEventListener('click', () => {
+        document.querySelector('.burger-menu').style.display = "flex";
+        document.querySelector('.burger-menu-close').style.display = "none";
+        document.querySelector('nav').classList.remove("mobile-nav");
+        document.querySelector('nav ul').classList.remove("mobile-nav-list");
+    })
+
+
 }
 export default eventNav;

@@ -125,7 +125,7 @@
 }
 
     .citation-landing-page {
-        color: #E99800;
+        color: var(--gold-citation);
         font-family: 'Junge', cursive;
         font-size: 18px;
         margin-top: 80%;
@@ -145,18 +145,16 @@
 
     button {
         display: flex;
-        /*position: absolute;*/
-        background-color: #333030;
-        bottom: 15%;
-        left: 50%;
+        background-color: var(--dark-bg-nav);
         width: 90px;
         height: 32px;
         justify-content: center;
         align-items: center;
         border-radius: 6px;
-        border-top: solid #E99800 2px;
-        border-bottom: #E99800 2px solid;
-        color: #F4F0F0FF;
+        border-top: solid var(--gold-citation) 2px;
+        border-bottom: var(--gold-citation) 2px solid;
+        color: var(--ancient-paper-white);
+        margin-top: 22vh;
     }
 
     button:hover {
@@ -372,10 +370,5 @@
     .block-partenaires-presentation {
         display: flex;
     }
-
-    .body-dokan-intro {
-        background-color: #edece1;
-    }
-
 }
 
