@@ -37,8 +37,23 @@
         height: 100vh;
         background: var(--dark-bg-nav) ;
         border-right: var(--nav-border);
-        padding-top: 65px;
+        border-radius: 0 10px  10px 0;
     }
+
+    .burger-menu-list li {
+        display: flex;
+        flex-direction: column;
+        border-top: var(--nav-border);
+        height: 5vh;
+        justify-content: center;
+        padding-left: 10px;
+    }
+
+    .burger-menu-list li:nth-child(1) {
+        border-top: none;
+    }
+
+
 
     .disabled {
         display: none;
@@ -47,6 +62,5 @@
     .enabled {
         display: block;
     }
-
 }
 

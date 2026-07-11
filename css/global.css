@@ -17,8 +17,9 @@
     --dark-bg-nav: #333030;
     --shadow-bg-nav: #2B0B0B;
     --ancient-paper-white: #edece1;
-    --nav-border: var(--budo-red) 1px solid;;
+    --nav-border: var(--budo-red) 1px solid;
     --box-shadow-nav: 0 9px 20px var(--shadow-bg-nav);
+    --border-radius-nav: 0 0 10px 10px;
 }
 
 /*Unreset*/
@@ -329,7 +330,6 @@ h1 {
     box-shadow: 8px 5px 10px #5a5252b3;
 }
 
-
 .stage-saison-card img {
     display: block;
     border: solid black 1px;
@@ -395,8 +395,6 @@ h1 {
     width: 100%;
     border: solid #a3a3a3 1px;
     background-color: white;
-
-
 }
 
 .wrapper-form-inscription input:hover, .wrapper-form-inscription textarea:hover {
@@ -416,13 +414,6 @@ h1 {
     border: solid #2cb81c 1px;
 
 }
-
-/*.wrapper-form-inscription textarea:not(:placeholder-shown) {*/
-/*    box-shadow: 8px 5px 10px #5a5252b3;*/
-/*    border: solid #2cb81c 1px;*/
-/*}*/
-
-
 
 label {
     display: block;
@@ -533,4 +524,21 @@ input[type="submit"] {
 
 .block-partenaires-presentation {
     display: flex;
+}
+
+
+.nav-list li:hover{
+    position: relative;
+    width: 82px;
+    top: 10px;
+    height: 48px;
+    text-align: center;
+    padding-top: 2px;
+    padding-left: 8px;
+    color: rgb(213 53 46 / 0.86);
+    font-weight: 800;
+}
+
+.nav-list {
+    width: 70%;
 }
