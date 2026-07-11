@@ -70,6 +70,26 @@
         margin: 3px auto;
     }
 
+    .burger-menu-close {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        right: 0;
+        width: 38px;
+    }
+
+    .burger-menu-close .burger-menu-line:nth-child(1) {
+        transform: rotate(45deg);
+        margin-bottom: -1px;
+        margin-top: 1px;
+    }
+
+    .burger-menu-close .burger-menu-line:nth-child(2) {
+        transform: rotate(-45deg);
+        margin-top: -1px;
+    }
+
     .burger-menu-list {
         position: absolute;
         top: 0;
@@ -154,7 +174,7 @@
         color: #333030;
     }
     /*Others pages*/
-    stage-saison-card {
+    .stage-saison-card {
         display: flex;
         justify-content: center;
         flex-direction: column;
