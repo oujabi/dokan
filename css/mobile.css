@@ -3,11 +3,51 @@
 
 @media (max-width: 1024px) {
     /* ------------ navigation ------------ */
-    /*Menu*/
-    .nav-list {
+    nav ul {
         display: none;
     }
 
+    .mobile-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 83%;
+        height: 100vh;
+        background-color: var(--dark-bg-nav);
+        border-radius: 0 10px 10px 0;
+        border-right: var(--nav-border);
+        padding: 0;
+    }
+
+    .mobile-nav-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mobile-nav li {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-bottom: var(--nav-border);
+        padding-left: 5vw;
+        height: 65px;
+        justify-content: center;
+    }
+
+    .mobile-nav li a {
+        font-size: 1.4rem;
+        color: var(--ancient-paper-white);
+        font-family:'Roboto', sans-serif;
+    }
+
+    .mobile-nav li:last-child {
+        border-bottom: none;
+    }
+
+    /*Menu*/
     .burger-menu {
         display: flex;
         flex-direction: column;
@@ -72,7 +112,8 @@
 
     .citation-landing-page {
         color: #E99800;
-        font-size: 20px;
+        font-family: 'Junge', cursive;
+        font-size: 18px;
         margin-top: 80%;
         padding: 18px;
     }
@@ -83,15 +124,14 @@
 
     .citation-landing-page > span {
         display: block;
-        position: relative;
-        top: 30px;
+        margin-top: 20px;
         width: 100%;
         text-align: right;
     }
 
     button {
         display: flex;
-        position: absolute;
+        /*position: absolute;*/
         background-color: #333030;
         bottom: 15%;
         left: 50%;
