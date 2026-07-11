@@ -114,12 +114,6 @@
         border-top: none;
     }
 
-    .banner-vanish {
-        background-color: transparent;
-        border-bottom: none;
-        box-shadow: none;
-    }
-
     /*Landing page*/
     .body-landing-page {
         background-image:
