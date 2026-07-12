@@ -1,374 +1,415 @@
 @import url('../main.css');
 
-
-@media (max-width: 1024px) {
-    /* ------------ navigation ------------ */
-    nav ul {
-        display: none;
-    }
-
-    .mobile-nav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        width: 83%;
-        height: 100vh;
-        background-color: var(--dark-bg-nav);
-        border-radius: 0 10px 10px 0;
-        border-right: var(--nav-border);
-        padding: 0;
-    }
-
-    .mobile-nav-list {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .mobile-nav li {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        border-bottom: var(--nav-border);
-        padding-left: 5vw;
-        height: 65px;
-        justify-content: center;
-    }
-
-    .mobile-nav li a {
-        font-size: 1.4rem;
-        color: var(--ancient-paper-white);
-        font-family:'Roboto', sans-serif;
-    }
-
-    .mobile-nav li:last-child {
-        border-bottom: none;
-    }
-
-    /*Menu*/
-    .burger-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        cursor: pointer;
-        position: relative;
-        right: 0;
-        width: 38px;
-        height: 38px;
-        border-radius: 5px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .burger-menu-line {
-        position: relative;
-        width: 25px;
-        height: 2px;
-        background-color: #b8221c;
-        margin: 3px auto;
-    }
-
-    .burger-menu-close {
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        cursor: pointer;
-        right: 0;
-        width: 38px;
-    }
-
-    .burger-menu-close .burger-menu-line:nth-child(1) {
-        transform: rotate(45deg);
-        margin-bottom: -1px;
-        margin-top: 1px;
-    }
-
-    .burger-menu-close .burger-menu-line:nth-child(2) {
-        transform: rotate(-45deg);
-        margin-top: -1px;
-    }
-
-    .burger-menu-list {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 60%;
-        height: 100vh;
-        background: var(--dark-bg-nav) ;
-        border-right: var(--nav-border);
-        border-radius: 0 10px  10px 0;
-    }
-
-    .burger-menu-list li {
-        display: flex;
-        flex-direction: column;
-        border-top: var(--nav-border);
-        height: 5vh;
-        justify-content: center;
-        padding-left: 10px;
-    }
-
-    .burger-menu-list li:nth-child(1) {
-        border-top: none;
-    }
-
-    /*Landing page*/
-    .body-landing-page {
-        background-image:
-                linear-gradient(#332e2e),
-                url("../assets/tamurasensei.jpg");
-        background-size: cover;
-        background-blend-mode: hard-light;
-        height: 100vh;
+/* ------------ navigation ------------ */
+nav ul {
+    display: none;
 }
 
-    .citation-landing-page {
-        color: var(--gold-citation);
-        font-family: 'Junge', cursive;
-        font-size: 18px;
-        margin-top: 80%;
-        padding: 18px;
-    }
+.mobile-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 83%;
+    height: 100vh;
+    background-color: var(--dark-bg-nav);
+    border-radius: 0 10px 10px 0;
+    border-right: var(--nav-border);
+    padding: 0;
+}
 
-    .citation-landing-page > p {;
-        text-align: left;
-    }
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
-    .citation-landing-page > span {
-        display: block;
-        margin-top: 20px;
-        width: 100%;
-        text-align: right;
-    }
+.mobile-nav li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: var(--nav-border);
+    padding-left: 5vw;
+    height: 65px;
+    justify-content: center;
+}
 
-    button {
-        display: flex;
-        background-color: var(--dark-bg-nav);
-        width: 90px;
-        height: 32px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 6px;
-        border-top: solid var(--gold-citation) 2px;
-        border-bottom: var(--gold-citation) 2px solid;
-        color: var(--ancient-paper-white);
-        margin-top: 22vh;
-    }
+.mobile-nav li a {
+    font-size: 1.4rem;
+    color: var(--ancient-paper-white);
+    font-family:'Roboto', sans-serif;
+}
 
-    button:hover {
-        cursor: pointer;
-        background-color: #E99800;
-        border-top: solid #333030 2px;
-        border-bottom: #333030 2px solid;
-        border-radius: 6px;
-        color: #333030;
-    }
-    /*Others pages*/
-    .stage-saison-card {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        height: 500px;
-        box-shadow: 8px 5px 10px #5a5252b3;
-    }
+.mobile-nav li:last-child {
+    border-bottom: none;
+}
 
-    .stage-saison-card img {
-        display: block;
-        border: solid black 1px;
-    }
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+}
 
-    .stage-city-name {
-        display: block;
-        margin-bottom: 10px;
-        position: relative;
-        top: 20px;
-    }
+.burger-menu-line {
+    position: relative;
+    width: 25px;
+    height: 2px;
+    background-color: #b8221c;
+    margin: 3px auto;
+}
 
-    .header-block-medias {
-        width: 100%;
-        height: 60px;
-        display: flex;
-        justify-content: center;
-        background-color: #D9D9D9;
-        border-bottom: solid black 1px;
-        font-weight: 800;
-    }
+.burger-menu-close {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    right: 0;
+    width: 38px;
+}
 
-    .header-block-medias > h2 {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        align-content: center;
-    }
+.burger-menu-close .burger-menu-line:nth-child(1) {
+    transform: rotate(45deg);
+    margin-bottom: -1px;
+    margin-top: 1px;
+}
 
-    .block-list-card-media {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-    }
+.burger-menu-close .burger-menu-line:nth-child(2) {
+    transform: rotate(-45deg);
+    margin-top: -1px;
+}
 
-    .block-list-card-media .card {
-        margin: 10px;
-        padding: 0;
-    }
+.burger-menu-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100vh;
+    background: var(--dark-bg-nav) ;
+    border-right: var(--nav-border);
+    border-radius: 0 10px  10px 0;
+}
 
-    .formulaire-inscription {
-        display: flex;
-        justify-content: center;
+.burger-menu-list li {
+    display: flex;
+    flex-direction: column;
+    border-top: var(--nav-border);
+    height: 5vh;
+    justify-content: center;
+    padding-left: 10px;
+}
 
-    }
+.burger-menu-list li:nth-child(1) {
+    border-top: none;
+}
 
-    .wrapper-form-inscription {
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* ------------ Landing-page ------------ */
+.body-landing-page {
+    background-image:
+            linear-gradient(#332e2e),
+            url("../assets/tamurasensei.jpg");
+    background-size: cover;
+    background-blend-mode: hard-light;
+    height: 100vh;
+}
 
-    .wrapper-form-inscription input {
-        border: solid #a3a3a3 1px;
-        height: 30px;
-        background-color: white;
-    }
+.citation-landing-page {
+    color: var(--gold-citation);
+    font-family: 'Junge', cursive;
+    font-size: 18px;
+    margin-top: 80%;
+    padding: 18px;
+}
 
-    .wrapper-form-inscription textarea {
-        width: 100%;
-        border: solid #a3a3a3 1px;
-        background-color: white;
-    }
+.citation-landing-page > p {;
+    text-align: left;
+}
 
-    .wrapper-form-inscription input:hover, .wrapper-form-inscription textarea:hover {
-        border: solid #B8221C 2px;
-        background-color: white;
-    }
+.citation-landing-page > span {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    text-align: right;
+}
 
-    .wrapper-form-inscription input:focus, .wrapper-form-inscription textarea:focus {
-        border: solid #B8221C 2px;
-        background-color: white;
-        box-shadow: 8px 5px 10px #5a5252b3;
+button {
+    display: flex;
+    background-color: var(--dark-bg-nav);
+    width: 90px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border-top: solid var(--gold-citation) 2px;
+    border-bottom: var(--gold-citation) 2px solid;
+    color: var(--ancient-paper-white);
+    margin-top: 22vh;
+}
 
-    }
+button:hover {
+    cursor: pointer;
+    background-color: #E99800;
+    border-top: solid #333030 2px;
+    border-bottom: #333030 2px solid;
+    border-radius: 6px;
+    color: #333030;
+}
+/* ------------ Page: Dokan ------------ */
+.dokan-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .wrapper-form-inscription input:not(:placeholder-shown) {
-        box-shadow: 8px 5px 10px #5a5252b3;
-        border: solid #2cb81c 1px;
+.block-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85vw;
+    margin-bottom: 2vh;
+}
 
-    }
+.block-text > h2 {
+    order: 1;
+}
 
-    label {
-        display: block;
-        margin-bottom: 3px;
-    }
+.block-text > p {
+    order: 3;
+    margin-top: 1.5vh;
+}
 
-    .form-group {
-        margin-bottom: 20px;
-    }
+.illustration {
+    order: 2;
+}
 
-    .form-section:nth-child(1) {
-        display: flex;
-        width: 30%;
-        justify-content: space-between;
-    }
+.small-hr-right, .small-hr-left {
+    display: none;
+}
 
-    .form-section:nth-child(2), .form-section:nth-child(3), .form-section:nth-child(4) {
-        width: 30%;
-    }
+.large-hr {
+    display: block;
+    width: 80vw;
+    background-color: var(--budo-red);
+    height: 0.2rem;
+    box-shadow: var(--box-shadow-hr);
+    border: none;
+}
 
-    .form-section:nth-child(2) input, .form-section:nth-child(3) textarea {
-        width: 100%;
-    }
+/* ------------ Page: Stages de la saison ------------ */
+.stage-saison-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    box-shadow: 8px 5px 10px #5a5252b3;
+}
 
-    .form-section:nth-child(4) input[type="submit"]{
-        width: 30%;
-        height: 35px;
-        text-align: center;
-        margin-left: 70%;
-        font-weight: bold;
-        color: #b8221c;
-        border: solid #B8221C 1px;
-        background: white;
-        box-shadow: 8px 5px 10px #5a5252b3;
+.stage-saison-card img {
+    display: block;
+    border: solid black 1px;
+}
+
+.stage-city-name {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    top: 20px;
+}
 
 
-    }
+/* ------------ Médias page ------------ */
+.header-block-medias {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: #D9D9D9;
+    border-bottom: solid black 1px;
+    font-weight: 800;
+}
 
-    .form-section:nth-child(4) input[type="submit"]:hover {
-        color: white;
-        background-color: #B8221C;
-        box-shadow: none;
-    }
+.header-block-medias > h2 {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+}
 
-    .form-section:nth-child(3) textarea {
-        height: 130px;
-    }
+.block-list-card-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
 
-    input[type="submit"] {
-        position: relative;
-        left: 0;
-    }
+.block-list-card-media .card {
+    margin: 10px;
+    padding: 0;
+}
 
-    .active {
-        position: relative;
-        width: 82px;
-        top: 10px;
-        height: 48px;
-        text-align: center;
-        padding-top: 6px;
-        color: rgb(213 53 46 / 0.86);
-        font-weight: 400;
-    }
+/* ------------ Inscription ------------ */
+.formulaire-inscription {
+    display: flex;
+    justify-content: center;
 
-    .active > a {
-        pointer-events: none;
-    }
+}
 
-    .not-active:hover{
-        position: relative;
-        width: 82px;
-        top: 10px;
-        color: rgb(213 53 46 / 0.86);
-        height: 48px;
-        text-align: center;
-        padding-top: 6px;
-        font-weight: bold;
-    }
+.wrapper-form-inscription {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .info-pratique-main {
-        width: 80%;
-        margin: 0 auto;
-    }
+.wrapper-form-inscription input {
+    border: solid #a3a3a3 1px;
+    height: 30px;
+    background-color: white;
+}
 
-    .info-pratique-main .wrapper-info-pratique {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.wrapper-form-inscription textarea {
+    width: 100%;
+    border: solid #a3a3a3 1px;
+    background-color: white;
+}
 
-    .info-pratique-main .wrapper-info-pratique .block-infos-pratiques{
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
+.wrapper-form-inscription input:hover, .wrapper-form-inscription textarea:hover {
+    border: solid #B8221C 2px;
+    background-color: white;
+}
 
-    .block-logo-reseau {
-        width: 50%;
-        display: flex;
-        justify-content: space-around;
-    }
+.wrapper-form-inscription input:focus, .wrapper-form-inscription textarea:focus {
+    border: solid #B8221C 2px;
+    background-color: white;
+    box-shadow: 8px 5px 10px #5a5252b3;
 
-    .reseaux-sociaux {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+}
 
-    .block-partenaires-presentation {
-        display: flex;
-    }
+.wrapper-form-inscription input:not(:placeholder-shown) {
+    box-shadow: 8px 5px 10px #5a5252b3;
+    border: solid #2cb81c 1px;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-section:nth-child(1) {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.form-section:nth-child(2), .form-section:nth-child(3), .form-section:nth-child(4) {
+    width: 30%;
+}
+
+.form-section:nth-child(2) input, .form-section:nth-child(3) textarea {
+    width: 100%;
+}
+
+.form-section:nth-child(4) input[type="submit"]{
+    width: 30%;
+    height: 35px;
+    text-align: center;
+    margin-left: 70%;
+    font-weight: bold;
+    color: #b8221c;
+    border: solid #B8221C 1px;
+    background: white;
+    box-shadow: 8px 5px 10px #5a5252b3;
+
+
+}
+
+.form-section:nth-child(4) input[type="submit"]:hover {
+    color: white;
+    background-color: #B8221C;
+    box-shadow: none;
+}
+
+.form-section:nth-child(3) textarea {
+    height: 130px;
+}
+
+input[type="submit"] {
+    position: relative;
+    left: 0;
+}
+
+.active {
+    position: relative;
+    width: 82px;
+    top: 10px;
+    height: 48px;
+    text-align: center;
+    padding-top: 6px;
+    color: rgb(213 53 46 / 0.86);
+    font-weight: 400;
+}
+
+.active > a {
+    pointer-events: none;
+}
+
+.not-active:hover{
+    position: relative;
+    width: 82px;
+    top: 10px;
+    color: rgb(213 53 46 / 0.86);
+    height: 48px;
+    text-align: center;
+    padding-top: 6px;
+    font-weight: bold;
+}
+
+/* ------------ Infos pratiques ------------ */
+.info-pratique-main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.info-pratique-main .wrapper-info-pratique {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-pratique-main .wrapper-info-pratique .block-infos-pratiques{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.block-logo-reseau {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.reseaux-sociaux {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block-partenaires-presentation {
+    display: flex;
 }
 
