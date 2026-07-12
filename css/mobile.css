@@ -281,17 +281,32 @@ button:hover {
 }
 
 .stage-saison-card img {
-    display: block;
+    width: 65vw;
+    height: 45vh;
     border: solid black 1px;
 }
 
 .stage-city-name {
-    display: block;
-    margin-bottom: 10px;
-    position: relative;
-    top: 20px;
+    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
+    font-family: 'Junge', cursive;
+    font-size: 1.3rem;
 }
 
+.header-stage-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-stage-card hr {
+    width: 70px;
+    border: solid black 1px;
+}
+
+.block-header-stage-card {
+    margin: 0 10px;
+}
 
 /* ------------ Médias page ------------ */
 .header-block-medias {

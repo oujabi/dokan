@@ -121,35 +121,6 @@ hr {
     margin-bottom: 20px;
 }
 
-
-
-
-.header-stage-card {
-    display: flex;
-    justify-content: center;
-}
-
-.header-stage-card hr {
-    width: 70px;
-    border: solid black 1px;
-}
-
-.block-header-stage-card {
-    margin: 0 10px;
-}
-
-.block-header-stage-card h3 {
-    font-weight: bold;
-}
-
-.block-list-card-stage {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-left: 3%;
-    flex-wrap: wrap;
-}
-
 .nav-list li:hover{
     position: relative;
     width: 82px;
