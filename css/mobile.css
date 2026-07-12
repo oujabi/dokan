@@ -5,6 +5,16 @@ nav ul {
     display: none;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+main {
+    margin-top: 8vh;
+}
+
 .mobile-nav {
     position: absolute;
     top: 0;
