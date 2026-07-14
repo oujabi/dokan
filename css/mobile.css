@@ -343,41 +343,58 @@ button:hover {
 .formulaire-inscription {
     display: flex;
     justify-content: center;
-
-}
-
-.wrapper-form-inscription {
     width: 80%;
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.wrapper-form-inscription input {
+.fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.form-group {
+}
+
+.formulaire-inscription .form-group input  {
+    width: 80vw;
+    height: 2.2rem;
+    padding: 0.5rem;
+}
+
+.formulaire-inscription input {
     border: solid #a3a3a3 1px;
     height: 30px;
     background-color: white;
 }
 
-.wrapper-form-inscription textarea {
-    width: 100%;
+.formulaire-inscription textarea {
+    width: 80vw;
+    height: 30vh;
     border: solid #a3a3a3 1px;
     background-color: white;
+    padding: 0.5rem;
 }
 
-.wrapper-form-inscription input:hover, .wrapper-form-inscription textarea:hover {
+.formulaire-inscription input:hover, .formulaire-inscription textarea:hover {
     border: solid #B8221C 2px;
     background-color: white;
 }
 
-.wrapper-form-inscription input:focus, .wrapper-form-inscription textarea:focus {
+.formulaire-inscription input:focus, .formulaire-inscription textarea:focus {
     border: solid #B8221C 2px;
     background-color: white;
     box-shadow: 8px 5px 10px #5a5252b3;
 
 }
 
-.wrapper-form-inscription input:not(:placeholder-shown) {
+.formulaire-inscription input:not(:placeholder-shown) {
     box-shadow: 8px 5px 10px #5a5252b3;
     border: solid #2cb81c 1px;
 
@@ -392,47 +409,11 @@ label {
     margin-bottom: 20px;
 }
 
-.form-section:nth-child(1) {
-    display: flex;
-    width: 30%;
-    justify-content: space-between;
-}
-
-.form-section:nth-child(2), .form-section:nth-child(3), .form-section:nth-child(4) {
-    width: 30%;
-}
-
-.form-section:nth-child(2) input, .form-section:nth-child(3) textarea {
-    width: 100%;
-}
-
-.form-section:nth-child(4) input[type="submit"]{
-    width: 30%;
-    height: 35px;
-    text-align: center;
-    margin-left: 70%;
-    font-weight: bold;
-    color: #b8221c;
-    border: solid #B8221C 1px;
-    background: white;
-    box-shadow: 8px 5px 10px #5a5252b3;
-
-
-}
-
-.form-section:nth-child(4) input[type="submit"]:hover {
-    color: white;
-    background-color: #B8221C;
-    box-shadow: none;
-}
-
-.form-section:nth-child(3) textarea {
-    height: 130px;
-}
-
 input[type="submit"] {
     position: relative;
     left: 0;
+    text-align: center;
+    height: 2.4rem;
 }
 
 .active {
