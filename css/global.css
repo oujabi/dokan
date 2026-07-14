@@ -121,6 +121,10 @@ hr {
     margin-bottom: 20px;
 }
 
+.required {
+    color: var(--budo-red);
+}
+
 .nav-list li:hover{
     position: relative;
     width: 82px;
