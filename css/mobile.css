@@ -132,6 +132,7 @@ main {
 }
 
 .citation-landing-page {
+    width: 30rem;
     color: var(--gold-citation);
     font-family: 'Junge', cursive;
     font-size: 18px;
@@ -151,17 +152,16 @@ main {
 }
 
 button {
-    display: flex;
     background-color: var(--dark-bg-nav);
     width: 90px;
     height: 32px;
-    justify-content: center;
-    align-items: center;
     border-radius: 6px;
     border-top: solid var(--gold-citation) 2px;
     border-bottom: var(--gold-citation) 2px solid;
     color: var(--ancient-paper-white);
     margin-top: 22vh;
+    text-align: center;
+    align-self: center;
 }
 
 button:hover {
