@@ -363,8 +363,13 @@ button:hover {
 
 .formulaire-inscription .form-group input  {
     width: 80vw;
-    height: 2.2rem;
+    height: 1.8rem;
     padding: 0.5rem;
+}
+
+.formulaire-inscription .form-group input[type="submit"] {
+    width: 80vw;
+    height: 2rem;
 }
 
 .formulaire-inscription input {
@@ -375,7 +380,7 @@ button:hover {
 
 .formulaire-inscription textarea {
     width: 80vw;
-    height: 30vh;
+    height: 20vh;
     border: solid #a3a3a3 1px;
     background-color: white;
     padding: 0.5rem;
