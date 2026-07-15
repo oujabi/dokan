@@ -359,9 +359,6 @@ button:hover {
     width: 80vw;
 }
 
-.form-group {
-}
-
 .formulaire-inscription .form-group input  {
     width: 80vw;
     height: 1.8rem;
@@ -411,12 +408,10 @@ label {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 input[type="submit"] {
-    position: relative;
-    left: 0;
     text-align: center;
     height: 2.4rem;
 }
@@ -462,7 +457,7 @@ input[type="submit"] {
 }
 
 .block-logo-reseau {
-    width: 50%;
+    width: 50vw;
     display: flex;
     justify-content: space-around;
 }
