@@ -443,21 +443,17 @@ input[type="submit"] {
 }
 
 /* ------------ Infos pratiques ------------ */
-.info-pratique-main {
+.infos-pratiques-main {
     width: 80%;
     margin: 0 auto;
-}
-
-.info-pratique-main .wrapper-info-pratique {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.info-pratique-main .wrapper-info-pratique .block-infos-pratiques{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+.block-infos-pratiques div p {
+    text-align: center;
+
 }
 
 .block-logo-reseau {
@@ -472,7 +468,29 @@ input[type="submit"] {
     align-items: center;
 }
 
-.block-partenaires-presentation {
+/* ------------ Partenaires ------------ */
+
+.block-partenaires {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vh;
 }
 
+.block-partenaire-text {
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+
+.block-partenaire-logo {
+    width: 72vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.block-partenaire-logo img {
+    width: 35vw;
+    margin-bottom: 1vh;
+}
