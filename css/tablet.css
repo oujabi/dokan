@@ -47,7 +47,7 @@
 @media (min-width: 1024px) {
     /* ------------ Landing-page ------------ */
     .citation-landing-page {
-        width: 40vw;
+        width: 30vw;
         margin-top: 45vh;
         margin-left: 5vw;
     }

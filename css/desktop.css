@@ -1,11 +1,11 @@
-@media (min-width: 1920px) {
+@media (min-width: 1280px) {
     /* ------------ navigation ------------ */
     .burger-menu, .burger-menu-close {
         display: none;
     }
 
     nav ul {
-        width: 28vw;
+        width: 35vw;
         display: flex;
     }
 
