@@ -1,4 +1,10 @@
 @media (min-width: 750px) {
+/* ------------ Landing-page ------------ */
+    .body-landing-page {
+        background-image:
+                linear-gradient(#332e2e),
+                url("../assets/sports-aikido.jpg");
+    }
 /* ------------ Page: Dokan ------------ */
     .block-list-card {
         justify-content: space-around;

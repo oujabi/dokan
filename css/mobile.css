@@ -1,5 +1,4 @@
 @import url('../main.css');
-
 /* ------------ navigation ------------ */
 nav ul {
     display: none;
@@ -208,9 +207,8 @@ button:hover {
     display: block;
     width: 80vw;
     background-color: var(--budo-red);
-    height: 0.2rem;
+    height: 0.3rem;
     box-shadow: var(--box-shadow-hr);
-    border: none;
 }
 
 .block-list-card {
