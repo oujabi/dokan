@@ -82,8 +82,7 @@
 
     .small-hr-left {
         display: block;
-        position: relative;
-        right: 22vw;
+        margin-right: 53vw;
         width: 35vw;
         background-color: var(--budo-red);
         height: 0.2rem;
@@ -92,8 +91,7 @@
 
     .small-hr-right {
         display: block;
-        position: relative;
-        left: 22vw;
+        margin-left: 53vw;
         width: 35vw;
         background-color: var(--budo-red);
         height: 0.2rem;
