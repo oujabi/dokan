@@ -6,6 +6,7 @@ function eventNav() {
             document.querySelector('nav').classList.add("mobile-nav");
             document.querySelector('nav ul').classList.add("mobile-nav-list");
             document.querySelector('body').style.overflow = "hidden";
+            document.querySelector('.dokan-logo').style.display = "none";
         }
     );
 
@@ -19,6 +20,7 @@ function eventNav() {
         document.querySelector('nav').classList.remove("mobile-nav");
         document.querySelector('nav ul').classList.remove("mobile-nav-list");
         document.querySelector('body').style.overflow = "visible";
+        document.querySelector('.dokan-logo').style.display = "block";
     }
 
 }

@@ -10,6 +10,12 @@ header {
     top: 0;
 }
 
+.dokan-logo {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-top: 0.5vh;
+}
+
 .mobile-nav {
     position: absolute;
     top: 0;
@@ -36,12 +42,12 @@ header {
     width: 100%;
     border-bottom: var(--nav-border);
     padding-left: 5vw;
-    height: 65px;
+    height: 7vh;
     justify-content: center;
 }
 
 .mobile-nav li a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--ancient-paper-white);
     font-family:'Roboto', sans-serif;
 }
@@ -123,6 +129,7 @@ header {
             url("../assets/tamurasensei.jpg");
     background-size: cover;
     background-blend-mode: hard-light;
+    margin-top: 16vh;
 }
 
 .body-landing-page main {
@@ -133,8 +140,8 @@ header {
     width: 23rem;
     color: var(--gold-citation);
     font-family: 'Junge', cursive;
-    font-size: 18px;
-    margin-top: 23vh;
+    font-size: 1rem;
+    margin-top: 30vh;
     padding: 18px;
 }
 
@@ -147,6 +154,7 @@ header {
     margin-top: 20px;
     width: 100%;
     text-align: right;
+    font-style: italic;
 }
 
 button {
@@ -236,10 +244,13 @@ button:hover {
 .card > img {
     display: block;
     margin: auto;
-    padding-top: 0.4rem;
-    width: 10rem;
+    padding-top: 3rem;
+    width: 8rem;
 }
 
+.card > p {
+    margin-top: 2vh;
+}
 .card:nth-child(1n+5) {
     margin-top: 40px;
 }
@@ -280,6 +291,7 @@ button:hover {
 }
 
 .stage-saison-card img {
+    padding-top: 0;
     width: 25rem;
     border: solid black 1px;
 }
@@ -418,15 +430,18 @@ input[type="submit"] {
     position: relative;
     width: 82px;
     top: 10px;
-    height: 48px;
     text-align: center;
+    height: 48px;
     padding-top: 6px;
-    color: rgb(213 53 46 / 0.86);
     font-weight: 400;
 }
 
 .active > a {
     pointer-events: none;
+}
+
+.mobile-nav li a[class="active"] {
+    color: var(--budo-red);
 }
 
 .not-active:hover{
@@ -479,6 +494,7 @@ input[type="submit"] {
 .block-partenaire-text {
     margin-top: 1vh;
     margin-bottom: 2vh;
+    margin-left: 3vw;
 }
 
 .block-partenaire-logo {
