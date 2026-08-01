@@ -6,7 +6,7 @@ nav ul {
 
 header {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0;
 }
 
@@ -190,8 +190,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 85vw;
-    margin-bottom: 2vh;
+    width: 24rem;
+    margin-bottom: 8vh;
 }
 
 .block-text > h2 {
@@ -411,9 +411,16 @@ input[type="submit"] {
     align-items: center;
 }
 
+.block-infos-pratiques {
+    margin-bottom: 3vh;
+}
+
+.block-infos-pratiques .block-adresse, .block-infos-pratiques .reseaux-sociaux {
+    margin-bottom: 4vh;
+}
+
 .block-infos-pratiques div p {
     text-align: center;
-
 }
 
 .block-logo-reseau {
@@ -426,6 +433,10 @@ input[type="submit"] {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.instagram {
+    margin-top: 0.35rem;
 }
 
 /* ------------ Partenaires ------------ */
@@ -445,11 +456,16 @@ input[type="submit"] {
 }
 
 .block-partenaire-logo {
-    width: 72vw;
+    width: 80vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+.block-partenaire-logo a:nth-child(2) {
+    margin-top: 7px;
+}
+
 
 .block-partenaire-logo img {
     width: 35vw;
@@ -457,8 +473,8 @@ input[type="submit"] {
 }
 
 .heritage-card, .team-card {
-    width: 90vw;
-    height: 52vh;
+    width: 23rem;
+    height: 28rem;
 }
 
 .heritage-card p {

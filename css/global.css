@@ -49,12 +49,11 @@ hr {
 
 /*Main Elements*/
 header {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    height: 7vh;
+    height: 4rem;
     padding: 1.3rem;
     border-radius: 0 0 1rem 1rem;
 
@@ -99,7 +98,7 @@ h3 {
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-top: 1vh;
 }
 
@@ -116,7 +115,7 @@ hr {
 
 .large-hr {
     display: block;
-    width: 23rem;
+    width: 90vw;
     height: 0.22rem;
     background-color: var(--budo-red);
     box-shadow: var(--box-shadow-hr);
