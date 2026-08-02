@@ -6,7 +6,7 @@ nav ul {
 
 header {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     top: 0;
 }
 
@@ -22,7 +22,7 @@ header {
     left: 0;
     display: flex;
     flex-direction: column;
-    width: 20rem;
+    width: 18rem;
     height: 100vh;
     background-color: var(--dark-bg-nav);
     border-radius: 0 10px 10px 0;
@@ -42,7 +42,7 @@ header {
     width: 100%;
     border-bottom: var(--nav-border);
     padding-left: 5vw;
-    height: 7vh;
+    height: 4rem;
     justify-content: center;
 }
 
@@ -129,11 +129,14 @@ header {
             url("../assets/tamurasensei.jpg");
     background-size: cover;
     background-blend-mode: hard-light;
-    margin-top: 16vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
 
 .body-landing-page main {
     align-items: unset;
+    margin-top: 47vh;
 }
 
 .citation-landing-page {
@@ -141,20 +144,25 @@ header {
     color: var(--gold-citation);
     font-family: 'Junge', cursive;
     font-size: 1rem;
-    margin-top: 30vh;
-    padding: 18px;
+    margin-bottom: 10vh;
 }
 
-.citation-landing-page > p {;
+.citation-landing-page > p {
     text-align: left;
+    margin-left: 2vh;
 }
 
 .citation-landing-page > span {
     display: block;
-    margin-top: 20px;
+    bottom: 8rem;
     width: 100%;
     text-align: right;
     font-style: italic;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 button {
@@ -165,9 +173,7 @@ button {
     border-top: solid var(--gold-citation) 2px;
     border-bottom: var(--gold-citation) 2px solid;
     color: var(--ancient-paper-white);
-    margin-top: 12vh;
     text-align: center;
-    align-self: center;
 }
 
 button:hover {
@@ -190,7 +196,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 24rem;
+    width: 22rem;
     margin-bottom: 8vh;
 }
 
@@ -238,8 +244,8 @@ button:hover {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 95vw;
-    height: 80vh;
+    width: 22rem;
+    height: 40rem;
     box-shadow: 8px 5px 10px #5a5252b3;
 }
 
@@ -279,7 +285,7 @@ button:hover {
 /* ------------ Médias page ------------ */
 .header-block-medias {
     width: 100%;
-    height: 6vh;
+    height: 4rem;
     display: flex;
     justify-content: center;
     background-color: var(--budo-red);
@@ -424,7 +430,7 @@ input[type="submit"] {
 }
 
 .block-logo-reseau {
-    width: 50vw;
+    width: 11rem;
     display: flex;
     justify-content: space-around;
 }
@@ -456,7 +462,7 @@ input[type="submit"] {
 }
 
 .block-partenaire-logo {
-    width: 80vw;
+    width: 22rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -468,13 +474,13 @@ input[type="submit"] {
 
 
 .block-partenaire-logo img {
-    width: 35vw;
+    width: 9rem;
     margin-bottom: 1vh;
 }
 
 .heritage-card, .team-card {
     width: 23rem;
-    height: 28rem;
+    height: 30rem;
 }
 
 .heritage-card p {
@@ -482,13 +488,9 @@ input[type="submit"] {
     padding: 0 1rem;
 }
 
-.team-card {
-
-}
-
 .media-card {
-    width: 95vw;
-    height: 80vh;
+    width: 22rem;
+    height: 30rem;
 }
 
 .block-list-card .media-card .img-media {
@@ -500,6 +502,9 @@ input[type="submit"] {
 }
 
 video {
-    width: 95vw;
+    width: 22rem;
     margin-top: 2rem;
+    border-radius: 10px;
 }
+
+
