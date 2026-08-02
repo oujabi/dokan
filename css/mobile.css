@@ -140,22 +140,22 @@ header {
 }
 
 .citation-landing-page {
-    width: 23rem;
+    width: 22rem;
+    height: 12rem;
     color: var(--gold-citation);
     font-family: 'Junge', cursive;
     font-size: 1rem;
-    margin-bottom: 10vh;
+    margin-bottom: 8vh;
+    margin-left: 3vw;
 }
 
 .citation-landing-page > p {
     text-align: left;
-    margin-left: 2vh;
 }
 
 .citation-landing-page > span {
     display: block;
-    bottom: 8rem;
-    width: 100%;
+    width: 98%;
     text-align: right;
     font-style: italic;
 }
@@ -196,7 +196,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 22rem;
+    width: 98vw;
     margin-bottom: 8vh;
 }
 
@@ -207,6 +207,11 @@ button:hover {
 .block-text > p {
     order: 3;
     margin-top: 1.5vh;
+    width: 21rem;
+}
+
+.block-text .illustration {
+    width: 22rem;
 }
 
 .illustration {
@@ -244,7 +249,7 @@ button:hover {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 22rem;
+    width: 21rem;
     height: 40rem;
     box-shadow: 8px 5px 10px #5a5252b3;
 }
@@ -284,7 +289,7 @@ button:hover {
 
 /* ------------ Médias page ------------ */
 .header-block-medias {
-    width: 100%;
+    width: 100vw;
     height: 4rem;
     display: flex;
     justify-content: center;
@@ -479,7 +484,7 @@ input[type="submit"] {
 }
 
 .heritage-card, .team-card {
-    width: 23rem;
+    width: 21rem;
     height: 30rem;
 }
 
@@ -489,12 +494,12 @@ input[type="submit"] {
 }
 
 .media-card {
-    width: 22rem;
+    width: 21rem;
     height: 30rem;
 }
 
 .block-list-card .media-card .img-media {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     object-fit: cover;
     object-position: center;

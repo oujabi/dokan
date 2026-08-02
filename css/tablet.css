@@ -40,24 +40,21 @@
         justify-content: end;
         align-items: center;
     }
+
+    .block-partenaire-text {
+        width: 40rem;
+    }
 }
 
 /* ------------ Tablet landscape ------------ */
 @media (min-width: 1024px) {
     /* ------------ Landing-page ------------ */
     .citation-landing-page {
-        width: 30vw;
-        margin-top: 45vh;
-        margin-left: 5vw;
-    }
-
-    .citation-landing-page > p {
-        font-size: 1.8rem;
+        width: 33rem;
     }
 
     .citation-landing-page > span {
-        font-size: 1.6rem;
-        font-style: italic;
+        margin-top: 1rem;
     }
 
     /* ------------ Dokan ------------ */
@@ -75,14 +72,14 @@
     }
 
     .block-text p {
-        height: 30vh;
+        height: 24rem;
         font-size: 1.2rem;
     }
 
     .small-hr-left {
         display: block;
-        margin-right: 53vw;
-        width: 35vw;
+        margin-right: 45vw;
+        width: 50vw;
         background-color: var(--budo-red);
         height: 0.2rem;
         box-shadow: var(--box-shadow-hr);
@@ -90,19 +87,19 @@
 
     .small-hr-right {
         display: block;
-        margin-left: 53vw;
-        width: 35vw;
+        margin-left: 45vw;
+        width: 50vw;
         background-color: var(--budo-red);
         height: 0.2rem;
         box-shadow: var(--box-shadow-hr);
     }
 
     .block-text .illustration {
-        width: 40vw;
+        width: 40rem;
     }
 
     .block-text p {
-        width: 30vw;
+        width: 20rem;
     }
 
     .block-text-img-right h2 {
@@ -126,6 +123,6 @@
     }
 
     .block-list-card {
-        width: 70vw;
+        width: 98vw;
     }
 }
