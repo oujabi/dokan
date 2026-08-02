@@ -314,8 +314,8 @@ button:hover {
     font-weight: 800;
     margin-bottom: 4vh;
     color: var(--ancient-paper-white);
-    padding-left: 18rem;
-    padding-right: 2rem;
+    padding-left: 8vw;
+    padding-right: 2vh;
 }
 
 .header-block-medias > h2 {
@@ -324,11 +324,11 @@ button:hover {
     margin: 0;
     padding: 0;
     align-content: center;
+    text-align: left;
 }
 
 .block-toggle-medias {
     display: flex;
-    margin-top: 1rem;
 }
 
 .toggle-medias {

@@ -39,7 +39,7 @@ function event() {
            document.querySelector('.close-toggle-illustrations').style.display = "none";
        }
     });
-git
+
     document.querySelector('.header-block-medias-pictures').addEventListener('click', () => {
         if(document.querySelector('.body-block-medias-pictures').style.display === "block") {
             document.querySelector('.body-block-medias-pictures').style.display = "none";
