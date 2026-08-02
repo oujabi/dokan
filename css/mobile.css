@@ -306,7 +306,7 @@ button:hover {
     width: 100vw;
     height: 4rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--budo-red);
     border-bottom: solid black 1px;
@@ -314,6 +314,8 @@ button:hover {
     font-weight: 800;
     margin-bottom: 4vh;
     color: var(--ancient-paper-white);
+    padding-left: 18rem;
+    padding-right: 2rem;
 }
 
 .header-block-medias > h2 {
@@ -326,7 +328,7 @@ button:hover {
 
 .block-toggle-medias {
     display: flex;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 .toggle-medias {
@@ -336,9 +338,9 @@ button:hover {
     border-radius: 10px;
 }
 
-.open-toggle-illustrations-1, .open-toggle-illustrations-2,
-.open-toggle-videos-1, .open-toggle-videos-2,
-.open-toggle-pictures-1, .open-toggle-pictures-2 {
+.open-toggle-illustrations,
+.open-toggle-videos,
+.open-toggle-pictures {
     display: none;
 }
 
