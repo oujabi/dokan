@@ -1,7 +1,7 @@
 'use strict';
-import eventNav from "./js/eventNav.js";
+import event from "./js/event.js";
 
 /*Event Manager*/
-eventNav();
+event();
 
 

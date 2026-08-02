@@ -306,7 +306,8 @@ button:hover {
     width: 100vw;
     height: 4rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     background-color: var(--budo-red);
     border-bottom: solid black 1px;
     border-top: solid black 1px;
@@ -316,10 +317,51 @@ button:hover {
 }
 
 .header-block-medias > h2 {
+    width: 12rem;
     height: 100%;
     margin: 0;
     padding: 0;
     align-content: center;
+}
+
+.block-toggle-medias {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.toggle-medias {
+    background-color: var(--ancient-paper-white);
+    width: 1.7rem;
+    height: 0.22rem;
+    border-radius: 10px;
+}
+
+.open-toggle-illustrations-1, .open-toggle-illustrations-2,
+.open-toggle-videos-1, .open-toggle-videos-2,
+.open-toggle-pictures-1, .open-toggle-pictures-2 {
+    display: none;
+}
+
+.body-block-medias {
+    display: none;
+}
+
+.open-toggle-left {
+    transform: rotate(45deg);
+    margin-right: -10px;
+}
+
+.open-toggle-right {
+    transform: rotate(-45deg);
+}
+
+.close-toggle-left {
+    transform: rotate(-45deg);
+    margin-right: -10px;
+}
+
+.close-toggle-right {
+    transform: rotate(45deg);
 }
 
 /* ------------ Inscription ------------ */
@@ -530,7 +572,7 @@ input[type="submit"] {
 }
 
 video {
-    width: 22rem;
+    width: 21rem;
     margin-top: 2rem;
     border-radius: 10px;
 }
