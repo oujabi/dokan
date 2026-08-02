@@ -98,6 +98,17 @@ header {
     margin-top: -1px;
 }
 
+.burger-menu-close-area {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 200vh;
+    background-color: #FFFFFF00;
+    left: 18rem;
+    top: 4rem;
+}
+
+
 .burger-menu-list {
     position: absolute;
     top: 0;
