@@ -68,13 +68,12 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*margin-bottom: 24vh;*/
-    margin-top: 12vh;
+    margin-top: 10vh;
 }
 
 @media (orientation: landscape) {
     main {
-        margin-top: 18vh;
+        margin-top: 16vh;
     }
 }
 
@@ -84,6 +83,7 @@ h1 {
     color: var(--budo-red);
     text-align: center;
     font-size: 3rem;
+    margin-top: 2vh
 }
 
 
@@ -154,6 +154,7 @@ hr {
     margin-bottom: 4vh;
     padding: 0;
     overflow: hidden;
+    margin-top: 2vh;
 }
 
 .card {
