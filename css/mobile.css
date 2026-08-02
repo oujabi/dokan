@@ -203,12 +203,16 @@ button:hover {
     align-items: center;
 }
 
+.medias-main {
+    margin-bottom: 7vh;
+}
+
 .block-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 98vw;
-    margin-bottom: 8vh;
+    margin-bottom: 3vh;
 }
 
 .block-text > h2 {
@@ -223,10 +227,9 @@ button:hover {
 
 .block-text .illustration {
     width: 22rem;
-}
-
-.illustration {
     order: 2;
+    box-shadow: var(--box-shadow-card);
+    border-radius: 10px;
 }
 
 .small-hr-right, .small-hr-left {
@@ -288,7 +291,7 @@ button:hover {
 }
 
 .header-stage-card hr {
-    width: 6rem;
+    width: 5rem;
     height: 0.1rem;
     background-color: black;
 
@@ -386,7 +389,7 @@ label {
 }
 
 .form-group {
-    margin-bottom: 2.5vh;
+    margin-bottom: 2vh;
 }
 
 input[type="submit"] {
@@ -509,7 +512,16 @@ input[type="submit"] {
     height: 30rem;
 }
 
-.block-list-card .media-card .img-media {
+.block-list-card-medias {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    flex-wrap: wrap;
+}
+
+.block-list-card-medias .media-card .img-media {
     width: 100vw;
     height: 100%;
     object-fit: cover;
