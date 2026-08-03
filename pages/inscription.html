@@ -50,17 +50,19 @@
         <h1>Rejoignez-nous</h1>
         <hr class="large-hr">
 
-        <form class="formulaire-inscription" action="#">
+        <form class="formulaire-inscription" novalidate>
             <!-- Bloc d'informations personnelles -->
             <fieldset class="form-section">
                 <div class="form-group">
                     <label for="prenom" aria-required="true">Prénom<span class="required">*</span> :</label>
                     <input type="text" id="prenom" name="prenom" required aria-describedby="nom-help" placeholder="">
+                    <span class="error error-prenom" aria-live="polite"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="nom" aria-required="true">Nom<span class="required">*</span> :</label>
                     <input type="text" id="nom" name="nom" required aria-describedby="nom-help" placeholder="">
+                    <span class="error error-nom" aria-live="polite"></span>
                 </div>
             </fieldset>
 
@@ -68,13 +70,15 @@
             <fieldset class="form-section">
                 <div class="form-group">
                     <label for="email" aria-required="true">Email<span class="required">*</span> :</label>
-                    <input type="text" id="email" name="email" required placeholder="">
+                    <input type="email" id="email" name="email" required placeholder="">
+                    <span class="error error-mail" aria-live="polite"></span>
                 </div>
 
 
                 <div class="form-group">
                     <label for="telephone">Téléphone :</label>
-                    <input type="text" id="telephone" name="telephone" placeholder="">
+                    <input type="tel" id="telephone" name="telephone" placeholder="" pattern="[0-9]{10}">
+                    <span class="error error-tel" aria-live="polite"></span>
                 </div>
             </fieldset>
 
@@ -82,15 +86,14 @@
             <fieldset class="form-section">
                 <div class="form-group">
                     <label for="message" aria-required="true">Message<span class="required">*</span> :</label>
-                        <textarea id="message" name="message" placeholder="" required>
-
-                    </textarea>
+                    <textarea id="message" name="message" placeholder="" minlength="1" maxlength="800" required></textarea>
+                    <span class="error error-message" aria-live="polite"></span>
                 </div>
             </fieldset>
 
             <fieldset class="form-section">
                 <div class="form-group">
-                    <input class="formulaire-inscription-validation" type="submit" value="Envoyer"/>
+                    <input class="btn-inscription-validation" type="submit" value="Envoyer"/>
                 </div>
             </fieldset>
         </form>

@@ -395,8 +395,7 @@ button:hover {
     height: 2rem;
 }
 
-.formulaire-inscription input {
-    border: solid #a3a3a3 1px;
+.formulaire-inscription input, .formulaire-inscription textarea {
     height: 30px;
     background-color: var(--ancient-paper-white);
     border-radius: 5px;
@@ -405,26 +404,8 @@ button:hover {
 .formulaire-inscription textarea {
     width: 90vw;
     height: 20vh;
-    border: solid #a3a3a3 1px;
     background-color: var(--ancient-paper-white);
     padding: 0.5rem;
-}
-
-.formulaire-inscription input:hover, .formulaire-inscription textarea:hover {
-    background-color: var(--ancient-paper-white);
-}
-
-.formulaire-inscription input:focus, .formulaire-inscription textarea:focus {
-    box-shadow: var(--box-shadow-card);
-
-}
-
-.formulaire-inscription input:not(:placeholder-shown) {
-    box-shadow: var(--box-shadow-card);
-}
-
-.formulaire-inscription input:not(:placeholder-shown):focus {
-    box-shadow: none;
 }
 
 label {

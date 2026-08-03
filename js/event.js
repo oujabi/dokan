@@ -100,14 +100,114 @@ function event() {
                 document.querySelector('.close-toggle-videos').style.display = "none";
             }
         }
-
-        //Send email form inscriptions.
-        const inscriptionValidation = document.querySelector('.formulaire-inscription-validation');
-        if (!inscriptionValidation) return;
-        inscriptionValidation.addEventListener('click', () => {
-            console.log('Formulaire d\'inscription validé');
-        });
     });
+
+    //Reset empty value by default of textarea.
+    document.querySelector('textarea').value = '';
+
+    //Send email form inscriptions.
+    const inscriptionForm = document.querySelector(".formulaire-inscription");
+    inscriptionForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        formInscriptionValidity();
+    })
+
+    //Input Validation
+    const inputPrenom = document.querySelector('input[name="prenom"]');
+    const errorPrenom = document.querySelector('.error-prenom');
+    inputPrenom.addEventListener('input', () => {
+        errorPrenom.innerHTML = "";
+    })
+
+    const inputNom = document.querySelector('input[name="nom"]');
+    const errorNom = document.querySelector('.error-nom');
+    inputNom.addEventListener('input', () => {
+        errorNom.innerHTML = "";
+    })
+
+    const inputEmail = document.querySelector('input[name="email"]');
+    const errorEmail = document.querySelector('.error-mail')
+    inputEmail.addEventListener('input', () => {
+        errorEmail.innerHTML = "";
+    })
+
+    const inputTel = document.querySelector('input[name="telephone"]');
+    const errorTel = document.querySelector('.error-tel');
+    inputTel.addEventListener('input', () => {
+        errorTel.innerHTML = "";
+    })
+
+    const textareaMessage = document.querySelector('textarea[name="message"]');
+    const errorMessage = document.querySelector('.error-message');
+    textareaMessage.addEventListener('input', () => {
+        errorMessage.innerHTML = "";
+        maxLengthErrorManager(textareaMessage, "message", errorMessage);
+    })
+
+    function formInscriptionValidity() {
+        //input Prenom
+        const inputPrenom = document.querySelector('input[name="prenom"]');
+        const errorPrenom = document.querySelector('.error-prenom');
+        emptyErrorManager(inputPrenom, "Prénom", errorPrenom);
+
+        //input Nom
+        const inputNom = document.querySelector('input[name="nom"]');
+        const errorNom = document.querySelector('.error-nom');
+        emptyErrorManager(inputNom, "Nom", errorNom);
+
+        //input Email
+        const inputEmail = document.querySelector('input[name="email"]');
+        const errorEmail = document.querySelector('.error-mail')
+        emptyErrorManager(inputEmail, "email", errorEmail);
+        typeErrorManager(inputEmail, "email", errorEmail);
+
+        //input Tel
+        const inputTel = document.querySelector('input[name="telephone"]');
+        const errorTel = document.querySelector('.error-tel');
+        patternErrorManager(inputTel, "numéro de téléphone", errorTel);
+
+        //textarea Message
+        const textareaMessage = document.querySelector('textarea[name="message"]');
+        const errorMessage = document.querySelector('.error-message');
+        emptyErrorManager(textareaMessage, "message", errorMessage);
+    }
+
+    function emptyErrorManager(target, targetName, errorTarget) {
+        if (target.validity.valueMissing) {
+            errorTarget.innerHTML = "Veuillez entrer votre " + targetName + ".";
+        } else {
+            target.setCustomValidity("");
+        }
+    }
+
+    function typeErrorManager(target, targetName, errorTarget) {
+        if (target.validity.typeMismatch) {
+            errorTarget.innerHTML = "Veuillez entrer un " + targetName + " valide.";
+        } else {
+            target.setCustomValidity("");
+        }
+    }
+
+    function patternErrorManager(target, targetName, errorTarget) {
+        if (target.validity.patternMismatch) {
+            errorTarget.innerHTML = "Veuillez entrer un " + targetName + " valide.";
+        } else {
+            target.setCustomValidity("");
+        }
+    }
+
+    function maxLengthErrorManager(target, targetName, errorTarget) {
+        if (target.value.length === 800) {
+            errorTarget.innerHTML = "Votre " + targetName + " a atteint la limite maximal.";
+        } else {
+            target.setCustomValidity("");
+            errorTarget.innerHTML = "";
+
+        }
+    }
+
+    function sendEmail(emailData) {
+    }
 }
 
 export default event;

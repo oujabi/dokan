@@ -25,6 +25,8 @@ hr {
     --shadow-bg-nav: #2B0B0B;
     --shadow-bg-element: #5a5252b3;
     --ancient-paper-white: #fdfdfd;
+    --green-herb: #12540bb5;
+    --emergency-dark: #974242ab;
     --gold-citation: #feac13f2;
     --nav-border: var(--budo-red) 1px solid;
     --box-shadow-nav: 0 9px 20px var(--shadow-bg-nav);
@@ -32,6 +34,9 @@ hr {
     --box-shadow-hr: 8px 5px 10px var(--shadow-bg-element);
     --card-portrait-font: #D9D9D9;
     --box-shadow-card: 8px 5px 10px var(--shadow-bg-element);
+    --box-shadow-input-invalid: 8px 5px 10px var(--emergency-dark);
+    --box-shadow-input-valid: 8px 5px 10px var(--green-herb);
+    --box-shadow-hover-submit: 8px 5px 10px var(--gold-citation);
 }
 
 /*Toggle elements*/
@@ -168,3 +173,63 @@ video {
     box-shadow: var(--box-shadow-card);
     object-fit: cover;
 }
+
+/*---------- Formulaire d'inscription ---------*/
+/*----------- When page is displayed ---------*/
+.formulaire-inscription input:placeholder-shown:not(:focus), .formulaire-inscription textarea:placeholder-shown:not(:focus) {
+    box-shadow: none;
+    border: solid #a3a3a3 1px;
+}
+
+
+/*.formulaire-inscription input:placeholder-shown, .formulaire-inscription textarea:placeholder-shown {*/
+/*    box-shadow: none;*/
+/*    border: solid #a3a3a3 1px;*/
+/*}*/
+
+/*.formulaire-inscription input:placeholder-shown:not(:focus), .formulaire-inscription textarea:placeholder-shown:not(:focus) {*/
+/*    box-shadow: none;*/
+/*    border: solid #a3a3a3 1px;*/
+/*}*/
+
+/*----------- Check validity ---------*/
+.formulaire-inscription textarea:valid,.formulaire-inscription  input:valid {
+    box-shadow: var(--box-shadow-input-valid);
+    border: solid var(--green-herb) 1px;
+}
+
+.formulaire-inscription textarea:invalid, .formulaire-inscription input:invalid {
+    box-shadow: var(--box-shadow-input-invalid);
+    border: solid var(--budo-red) 1px;
+}
+
+/*----------- Send Formulaire ---------*/
+input[type="submit"]:valid, input[type="submit"]:invalid {
+    box-shadow: var(--box-shadow-card);
+}
+
+input[type="submit"]:hover {
+    color: var(--gold-citation);
+    box-shadow: var(--box-shadow-hover-submit);
+    border: solid var(--gold-citation) 1px;
+}
+
+input[type="submit"]:active {
+    box-shadow: none;
+}
+
+fieldset {
+    -webkit-appearance: none;
+}
+
+/*--------- Error message styles ---------*/
+.error {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--budo-red);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+
