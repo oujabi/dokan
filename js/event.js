@@ -221,7 +221,7 @@ function event() {
             + "tel: " + formData.get('telephone');
 
         const emailData = {
-            from: formData.get('email'),
+            from: formData.get('prenom') +" "+ formData.get('nom') + " " + "<"+formData.get('email')+">",
             subject: formData.get('object'),
             text: message
         };
@@ -231,11 +231,11 @@ function event() {
         fetch(rootSendMailTest+'/send-email', {
             method: 'POST',
             headers: {  'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*'
+                        // 'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify(emailData)
         }).then(response => response.json())
-            .then(data => console.log("data: " + data))
+            .then(data => console.log(data))
             .catch(error => console.error('Error:', error));
     }
 }
