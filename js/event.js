@@ -110,7 +110,44 @@ function event() {
     inscriptionForm.addEventListener('submit', (event) => {
         event.preventDefault();
         formInscriptionValidity();
+        if (inscriptionForm.checkValidity()) {
+            const formData = new FormData(inscriptionForm);
+            console.log(formData.get('prenom'));
+            console.log(formData.get('nom'));
+            console.log(formData.get('email'));
+            console.log(formData.get('telephone'));
+            console.log(formData.get('message'));
+            sendEmail(formData);
+        }
     })
+
+    function formInscriptionValidity() {
+        //input Prenom
+        const inputPrenom = document.querySelector('input[name="prenom"]');
+        const errorPrenom = document.querySelector('.error-prenom');
+        emptyErrorManager(inputPrenom, "Prénom", errorPrenom);
+
+        //input Nom
+        const inputNom = document.querySelector('input[name="nom"]');
+        const errorNom = document.querySelector('.error-nom');
+        emptyErrorManager(inputNom, "Nom", errorNom);
+
+        //input Email
+        const inputEmail = document.querySelector('input[name="email"]');
+        const errorEmail = document.querySelector('.error-mail')
+        emptyErrorManager(inputEmail, "email", errorEmail);
+        typeErrorManager(inputEmail, "email", errorEmail);
+
+        //input Tel
+        const inputTel = document.querySelector('input[name="telephone"]');
+        const errorTel = document.querySelector('.error-tel');
+        patternErrorManager(inputTel, "numéro de téléphone", errorTel);
+
+        //textarea Message
+        const textareaMessage = document.querySelector('textarea[name="message"]');
+        const errorMessage = document.querySelector('.error-message');
+        emptyErrorManager(textareaMessage, "message", errorMessage);
+    }
 
     //Input Validation
     const inputPrenom = document.querySelector('input[name="prenom"]');
@@ -144,33 +181,6 @@ function event() {
         maxLengthErrorManager(textareaMessage, "message", errorMessage);
     })
 
-    function formInscriptionValidity() {
-        //input Prenom
-        const inputPrenom = document.querySelector('input[name="prenom"]');
-        const errorPrenom = document.querySelector('.error-prenom');
-        emptyErrorManager(inputPrenom, "Prénom", errorPrenom);
-
-        //input Nom
-        const inputNom = document.querySelector('input[name="nom"]');
-        const errorNom = document.querySelector('.error-nom');
-        emptyErrorManager(inputNom, "Nom", errorNom);
-
-        //input Email
-        const inputEmail = document.querySelector('input[name="email"]');
-        const errorEmail = document.querySelector('.error-mail')
-        emptyErrorManager(inputEmail, "email", errorEmail);
-        typeErrorManager(inputEmail, "email", errorEmail);
-
-        //input Tel
-        const inputTel = document.querySelector('input[name="telephone"]');
-        const errorTel = document.querySelector('.error-tel');
-        patternErrorManager(inputTel, "numéro de téléphone", errorTel);
-
-        //textarea Message
-        const textareaMessage = document.querySelector('textarea[name="message"]');
-        const errorMessage = document.querySelector('.error-message');
-        emptyErrorManager(textareaMessage, "message", errorMessage);
-    }
 
     function emptyErrorManager(target, targetName, errorTarget) {
         if (target.validity.valueMissing) {
