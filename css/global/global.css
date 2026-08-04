@@ -212,7 +212,7 @@ h3 {
 
 p {
     font-family: var(--font-stack-text), sans-serif;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 hr {
@@ -252,6 +252,18 @@ hr {
     border-top: solid var(--shadow-bg-element) 1px;
     border-left: solid var(--shadow-bg-element) 1px;
     margin-bottom: 4vh;
+}
+
+.media-card {
+    padding: 0;
+}
+
+.media-card img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
 }
 
 .card h3 {
