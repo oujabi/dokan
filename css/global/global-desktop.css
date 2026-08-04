@@ -1,0 +1,31 @@
+@media (min-width: 1200px) {
+    /* Navigation */
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        width: 35vw;
+    }
+
+    nav ul li a {
+        font-size: 1.3rem;
+    }
+
+    nav ul li:hover {
+        color: var(--budo-red)
+    }
+
+    .burger-menu, .burger-menu-close {
+        display: none;
+    }
+
+    .active {
+        color: var(--budo-red);
+        font-size: 1.3rem;
+        font-weight: 800;
+        pointer-events: none;
+        top: 8px;
+        right: 3px;
+    }
+}

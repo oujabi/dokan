@@ -1,35 +1,97 @@
-@media (min-width: 1280px) {
-    /* ------------ navigation ------------ */
-    .burger-menu, .burger-menu-close {
-        display: none;
+@media (min-width: 1200px) {
+    /* ------------ Landing-page ------------ */
+    .landing-page {
+        background-image:
+                var(--landing-gradient-filter),
+                url("../assets/1117604-1920x1080-desktop-full-hd-aikido-wallpaper-image.jpg");
     }
 
-    nav ul {
-        width: 35vw;
+    .citation-landing-page {
+        width: 33rem;
+    }
+
+    .citation-landing-page > span {
+        margin-top: 1rem;
+    }
+
+    .button-wrapper-landing-page button:hover {
+        cursor: pointer;
+        background-color: #E99800;
+        border-top: solid #333030 2px;
+        border-bottom: #333030 2px solid;
+        border-radius: 6px;
+        color: #333030;
+    }
+
+    /* ------------ Dokan ------------ */
+    .block-text {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
-    nav ul li a {
-        font-size: 1.3rem;
+    .block-text h2 {
+        width: 100vw;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
     }
 
-    nav ul li:hover {
-        color: var(--budo-red)
+    .block-text p {
+        height: 22rem;
+        font-size: 1.2rem;
     }
 
-    .active {
-        color: var(--budo-red);
-        font-size: 1.3rem;
-        font-weight: 800;
-        pointer-events: none;
-        top: 8px;
-        right: 3px;
+    .small-hr-left {
+        display: block;
+        margin-right: 45vw;
+        width: 50vw;
+        background-color: var(--budo-red);
+        height: 0.2rem;
+        box-shadow: var(--box-shadow-element);
     }
 
-    .body-landing-page {
-        background-image: linear-gradient(#332e2e),
-        url("../assets/1117604-1920x1080-desktop-full-hd-aikido-wallpaper-image.jpg");
+    .small-hr-right {
+        display: block;
+        margin-left: 45vw;
+        width: 50vw;
+        background-color: var(--budo-red);
+        height: 0.2rem;
+        box-shadow: var(--box-shadow-element);
     }
 
+    .block-text .illustration {
+        width: 38rem;
+    }
 
+    .block-text p {
+        width: 50rem;
+    }
+
+    .block-text-dokan-img-right h2 {
+        text-align: left;
+        padding-left: 14rem;
+        order: 2
+    }
+
+    .block-text-dokan-img-left h2 {
+        text-align: right;
+        padding-right: 15rem;
+        order: 1
+    }
+
+    .block-text-dokan-img-right p {
+        order: 3
+    }
+
+    .block-text-dokan-img-right .illustration {
+        margin-bottom: 4vh;
+        order: 2
+    }
+
+    .block-text-dokan-img-left .illustration {
+        margin-bottom: 4vh;
+        order: 2
+    }
 }
+

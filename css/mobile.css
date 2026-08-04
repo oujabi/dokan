@@ -1,158 +1,21 @@
-@import url('../main.css');
-/* ------------ navigation ------------ */
-nav ul {
-    display: none;
-}
-
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-
-.dokan-logo {
-    width: 2.8rem;
-    height: 2.8rem;
-    margin-top: 0.5vh;
-}
-
-.mobile-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 18rem;
-    height: 100vh;
-    background-color: var(--dark-bg-nav);
-    border-radius: 0 10px 10px 0;
-    border-right: var(--nav-border);
-    padding: 0;
-}
-
-.mobile-nav-list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.mobile-nav li {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-bottom: var(--nav-border);
-    padding-left: 5vw;
-    height: 4rem;
-    justify-content: center;
-}
-
-.mobile-nav li a {
-    font-size: 1.2rem;
-    color: var(--ancient-paper-white);
-    font-family:'Roboto', sans-serif;
-}
-
-.mobile-nav li:last-child {
-    border-bottom: none;
-}
-
-.burger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    right: 0;
-    width: 38px;
-    height: 38px;
-    border-radius: 5px;
-    padding: 0;
-    margin: 0;
-}
-
-.burger-menu-line {
-    position: relative;
-    width: 25px;
-    height: 2px;
-    background-color: #b8221c;
-    margin: 3px auto;
-}
-
-.burger-menu-close {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    right: 0;
-    width: 38px;
-}
-
-.burger-menu-close .burger-menu-line:nth-child(1) {
-    transform: rotate(45deg);
-    margin-bottom: -1px;
-    margin-top: 1px;
-}
-
-.burger-menu-close .burger-menu-line:nth-child(2) {
-    transform: rotate(-45deg);
-    margin-top: -1px;
-}
-
-.burger-menu-close-area {
-    display: none;
-    position: absolute;
-    width: 100vw;
-    height: 200vh;
-    background-color: #FFFFFF00;
-    left: 18rem;
-    top: 4rem;
-}
-
-
-.burger-menu-list {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60%;
-    height: 100vh;
-    background: var(--dark-bg-nav) ;
-    border-right: var(--nav-border);
-    border-radius: 0 10px  10px 0;
-}
-
-.burger-menu-list li {
-    display: flex;
-    flex-direction: column;
-    border-top: var(--nav-border);
-    height: 5vh;
-    justify-content: center;
-    padding-left: 10px;
-}
-
-.burger-menu-list li:nth-child(1) {
-    border-top: none;
-}
-
 /* ------------ Landing-page ------------ */
-.body-landing-page {
+.landing-page {
     background-image:
-            linear-gradient(#332e2e),
+            var(--landing-gradient-filter),
             url("../assets/tamurasensei.jpg");
     background-size: cover;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
 
-.body-landing-page main {
-    align-items: unset;
-    margin-top: 47vh;
+.landing-page main {
+    margin-top: 45vh;
 }
 
 .citation-landing-page {
     width: 22rem;
-    height: 12rem;
+    height: 10rem;
     color: var(--gold-citation);
     font-family: 'Junge', cursive;
     font-size: 1rem;
@@ -171,12 +34,12 @@ header {
     font-style: italic;
 }
 
-.button-wrapper {
+.button-wrapper-landing-page {
     display: flex;
     justify-content: center;
 }
 
-button {
+.button-wrapper-landing-page button {
     background-color: var(--dark-bg-nav);
     width: 90px;
     height: 32px;
@@ -187,74 +50,37 @@ button {
     text-align: center;
 }
 
-button:hover {
-    cursor: pointer;
-    background-color: #E99800;
-    border-top: solid #333030 2px;
-    border-bottom: #333030 2px solid;
-    border-radius: 6px;
-    color: #333030;
-}
-
-/* ------------ Page: Dokan ------------ */
-.dokan-main {
+/* ------------ Dokan page ------------ */
+.block-text-dokan {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.medias-main {
-    margin-bottom: 7vh;
-}
-
-.block-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80vw;
-    margin-bottom: 3vh;
-}
-
-.block-text > h2 {
-    order: 1;
-}
-
-.block-text > p {
-    order: 3;
-    margin-top: 1.5vh;
-    width: 21rem;
-}
-
-.block-text .illustration {
-    width: 22rem;
-    order: 2;
-    box-shadow: var(--box-shadow-card);
+.block-text-dokan img {
+    width: 20rem;
+    margin-top: 1vh;
     border-radius: 10px;
+    box-shadow: var(--box-shadow-element);
 }
 
-.small-hr-right, .small-hr-left {
-    display: none;
+.block-text-dokan p {
+    width: 20rem;
+    margin-top: 2vh;
 }
 
-.portrait {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1vh auto 2vh auto;
-    padding: 0.5rem;
-}
+@media (orientation: landscape) {
+    /* ------------ Landing-page landscape ------------ */
+    .landing-page {
+        background-image: var(--landing-gradient-filter),
+        url("../assets/1117604-1920x1080-desktop-full-hd-aikido-wallpaper-image.jpg");
+    }
 
-.text-portrait {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 10rem;
-}
+    .citation-landing-page {
+        margin-bottom: 0;
+    }
 
-.text-portrait > p {
-    font-size: 1.3rem;
+    /* ------------ Dokan page landscape ------------ */
 }
 
 /* ------------ Page: Stages de la saison ------------ */
@@ -300,8 +126,12 @@ button:hover {
 .block-header-stage-card {
     margin: 0 1rem;
 }
+/*--- Médias page ---*/
 
-/* ------------ Médias page ------------ */
+.medias-main {
+    margin-bottom: 7vh;
+}
+
 .header-block-medias {
     width: 100vw;
     height: 4rem;
@@ -459,6 +289,65 @@ input[type="submit"] {
     padding-top: 6px;
     font-weight: bold;
 }
+
+/*---------- Formulaire d'inscription ---------*/
+.required {
+    color: var(--budo-red);
+}
+
+video {
+    box-shadow: var(--box-shadow-element);
+    object-fit: cover;
+}
+
+/*----------- When page is displayed ---------*/
+.formulaire-inscription input:placeholder-shown:not(:focus),
+.formulaire-inscription textarea:placeholder-shown:not(:focus),
+select[name="object"]
+{
+    box-shadow: none;
+    border: solid #a3a3a3 1px;
+}
+
+/*----------- Check validity ---------*/
+.formulaire-inscription textarea:valid,.formulaire-inscription  input:valid {
+    box-shadow: var(--box-shadow-input-valid);
+    border: solid var(--green-herb) 1px;
+}
+
+.formulaire-inscription textarea:invalid, .formulaire-inscription input:invalid {
+    box-shadow: var(--box-shadow-input-invalid);
+    border: solid var(--budo-red) 1px;
+}
+
+/*----------- Send Formulaire ---------*/
+input[type="submit"]:valid, input[type="submit"]:invalid {
+    box-shadow: var(--box-shadow-element);
+}
+
+input[type="submit"]:hover {
+    color: var(--gold-citation);
+    box-shadow: var(--box-shadow-hover-submit);
+    border: solid var(--gold-citation) 1px;
+}
+
+input[type="submit"]:active {
+    box-shadow: none;
+}
+
+fieldset {
+    -webkit-appearance: none;
+}
+
+/*--------- Error message styles ---------*/
+.error {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--budo-red);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
 
 /* ------------ Infos pratiques ------------ */
 .infos-pratiques-main {

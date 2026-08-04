@@ -1,16 +1,9 @@
 /* ------------ Tablet portrait ------------ */
 @media (min-width: 750px) {
-/* ------------ Landing-page ------------ */
-    .body-landing-page {
-        background-image:
-                linear-gradient(#332e2e),
-                url("../assets/tamurasensei.jpg");
-    }
 /* ------------ Page: Dokan ------------ */
     .block-list-card {
         justify-content: space-around;
         flex-direction: row;
-        align-items: center;
         width: 83vw;
     }
 
@@ -48,85 +41,7 @@
 }
 
 /* ------------ Tablet landscape ------------ */
-@media (min-width: 1024px) {
-    /* ------------ Landing-page ------------ */
-    .citation-landing-page {
-        width: 33rem;
-    }
+@media (min-width: var(--tablet-width)) and (orientation: landscape) {
 
-    .citation-landing-page > span {
-        margin-top: 1rem;
-    }
-
-    /* ------------ Dokan ------------ */
-    .block-text {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .block-text h2 {
-        width: 100vw;
-        margin-top: 3vh;
-        margin-bottom: 3vh;
-    }
-
-    .block-text p {
-        height: 22rem;
-        font-size: 1.2rem;
-    }
-
-    .small-hr-left {
-        display: block;
-        margin-right: 45vw;
-        width: 50vw;
-        background-color: var(--budo-red);
-        height: 0.2rem;
-        box-shadow: var(--box-shadow-hr);
-    }
-
-    .small-hr-right {
-        display: block;
-        margin-left: 45vw;
-        width: 50vw;
-        background-color: var(--budo-red);
-        height: 0.2rem;
-        box-shadow: var(--box-shadow-hr);
-    }
-
-    .block-text .illustration {
-        width: 38rem;
-    }
-
-    .block-text p {
-        width: 50rem;
-    }
-
-    .block-text-img-right h2 {
-        text-align: left;
-        padding-left: 14rem;
-        order: 2
-    }
-
-    .block-text-img-left h2 {
-        text-align: right;
-        padding-right: 15rem;
-        order: 1
-    }
-
-    .block-text-img-right p {
-        order: 3
-    }
-
-    .block-text-img-right .illustration {
-        margin-bottom: 4vh;
-        order: 2
-    }
-
-    .block-text-img-left .illustration {
-        margin-bottom: 4vh;
-        order: 2
-    }
 
 }

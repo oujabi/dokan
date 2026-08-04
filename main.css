@@ -1,5 +1,7 @@
 @import "node_modules/the-new-css-reset/css/reset.css";
-@import "css/global.css";
+@import "css/global/global.css";
+@import "css/global/global-tablet.css";
+@import "css/global/global-desktop.css";
 @import "css/mobile.css";
 @import "css/tablet.css";
 @import "css/desktop.css";

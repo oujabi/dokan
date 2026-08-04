@@ -38,18 +38,6 @@ app.post('/send-email', (req, res) => {
 
     const mailOptions = { from: from, to, subject, text };
 
-    // transporter.sendMail({
-    //     from: "Private Person <from@example.com>",
-    //     to: "A Test User <to@example.com>",
-    //     subject: "Hello from Mailtrap",
-    //     text: "This is a test e-mail message."
-    // }, (error, info) => {x
-    //     if (error) {
-    //         return console.log(error);
-    //     }
-    //     console.log("Message sent: %s", info.messageId);
-    // });
-
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error(error);
