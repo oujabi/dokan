@@ -176,7 +176,10 @@ video {
 
 /*---------- Formulaire d'inscription ---------*/
 /*----------- When page is displayed ---------*/
-.formulaire-inscription input:placeholder-shown:not(:focus), .formulaire-inscription textarea:placeholder-shown:not(:focus) {
+.formulaire-inscription input:placeholder-shown:not(:focus),
+.formulaire-inscription textarea:placeholder-shown:not(:focus),
+select[name="object"]
+{
     box-shadow: none;
     border: solid #a3a3a3 1px;
 }

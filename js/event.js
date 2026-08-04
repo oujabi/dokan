@@ -112,11 +112,6 @@ function event() {
         formInscriptionValidity();
         if (inscriptionForm.checkValidity()) {
             const formData = new FormData(inscriptionForm);
-            console.log(formData.get('prenom'));
-            console.log(formData.get('nom'));
-            console.log(formData.get('email'));
-            console.log(formData.get('telephone'));
-            console.log(formData.get('message'));
             sendEmail(formData);
         }
     })
@@ -216,7 +211,32 @@ function event() {
         }
     }
 
-    function sendEmail(emailData) {
+    function sendEmail(formData) {
+        // Frontend Script: Sending email data to backend
+        const message = formData.get('message')
+            + "\r\n\r\n"
+            + "\r\nContact: \r\n"
+            + formData.get('prenom') + " " + formData.get('nom') + "\r\n"
+            + "mail: " + formData.get('email') + "\r\n"
+            + "tel: " + formData.get('telephone');
+
+        const emailData = {
+            from: formData.get('email'),
+            subject: formData.get('object'),
+            text: message
+        };
+
+        const rootSendMailTest = 'http://localhost:3000';
+
+        fetch(rootSendMailTest+'/send-email', {
+            method: 'POST',
+            headers: {  'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*'
+            },
+            body: JSON.stringify(emailData)
+        }).then(response => response.json())
+            .then(data => console.log("data: " + data))
+            .catch(error => console.error('Error:', error));
     }
 }
 

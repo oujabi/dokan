@@ -384,6 +384,14 @@ button:hover {
     flex-direction: column;
 }
 
+.formulaire-inscription select[name="object"] {
+    width: 40vw;
+    height: 2.2rem;
+    padding: 0.5rem;
+    background-color: var(--ancient-paper-white);
+    border-radius: 5px;
+}
+
 .formulaire-inscription .form-group input  {
     width: 90vw;
     height: 1.8rem;
