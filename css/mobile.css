@@ -267,7 +267,7 @@ hr {
 
 .large-hr {
     display: block;
-    width: 90vw;
+    width: 95vw;
     height: 0.22rem;
     background-color: var(--budo-red);
     box-shadow: var(--box-shadow-element);

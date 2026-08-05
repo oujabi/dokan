@@ -1,12 +1,73 @@
 /* ------------ Tablet portrait ------------ */
-@media (min-width: 750px) {
+@media (min-width: 768px) {
+    /*---Titles ---*/
+    h2 {
+        width: 100vw;
+        margin-top: 2vh;
+    }
+
+    /*--- Texts ---*/
+    .block-text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .block-text img {
+        width: 50vw;
+    }
+
+    .block-text p {
+        width: 20rem;
+        height: 15rem;
+    }
+
+    .block-text-img-right h2 {
+        order: 1;
+        text-align: left;
+        padding-left: 1.5rem;
+    }
+
+    .block-text-img-right p {
+        order: 2;
+    }
+
+    .block-text-img-right img {
+        order: 3;
+    }
+
+    .block-text-img-left h2 {
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+    .small-hr-left {
+        display: block;
+        margin-right: 45vw;
+        width: 53vw;
+        background-color: var(--budo-red);
+        height: 0.2rem;
+        box-shadow: var(--box-shadow-element);
+        margin-top: 2vh;
+    }
+
+    .small-hr-right {
+        display: block;
+        margin-left: 45vw;
+        width: 53vw;
+        background-color: var(--budo-red);
+        height: 0.2rem;
+        box-shadow: var(--box-shadow-element);
+        margin-top: 2vh;
+    }
+
     /*--- Cards ---*/
     .block-card {
         justify-content: space-around;
         flex-direction: row;
         width: 83vw;
     }
-
 
     /*--- Forms ---*/
     .form-group input {

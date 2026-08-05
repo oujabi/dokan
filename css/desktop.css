@@ -41,32 +41,13 @@
     }
 
     /*--- Texts ---*/
-    .block-text {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-
     .block-text p {
         width: 40rem;
         height: 22rem;
-        font-size: 1.2rem;
     }
 
     .block-text-img-right h2 {
-        order: 1;
-        text-align: left;
         padding-left: 7.7rem;
-    }
-
-    .block-text-img-right p {
-        order: 2;
-    }
-
-    .block-text-img-right img {
-        order: 3;
     }
 
     .block-text-img-left h2 {
