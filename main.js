@@ -1,11 +1,12 @@
 'use strict';
-import event from "./js/event.js";
+import {mobileNav} from "./js/mobile-nav.js";
 import {eventToggleMedias} from "./js/eventToggleMedias.js";
 
-/*Event Manager*/
-// event();
+document.addEventListener('DOMContentLoaded', () => {
+    mobileNav();
+    eventToggleMedias();
+});
 
-eventToggleMedias()
 
 
 

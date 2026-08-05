@@ -1,7 +1,7 @@
 import {toggleMedias} from "./toggleMedias.js";
 
 export const eventToggleMedias = () => {
-    const elmsArr = [
+    const elsArr = [
         {
             block : document.querySelector('.block-illustrations'),
             toggle : document.querySelector('.toggle-illustrations'),
@@ -25,13 +25,17 @@ export const eventToggleMedias = () => {
         },
     ];
 
-    elmsArr.map(elm => {
-        elm.toggle.addEventListener('click', () =>
-            toggleMedias(elm.block, elm.toggleOpen, elm.toggleClose)
+    elsArr.map(el => {
+        if (!el.block || !el.toggle || !el.toggleOpen || !el.toggleClose) return
+
+        el.toggle.addEventListener('click', () =>
+            toggleMedias(el.block, el.toggleOpen, el.toggleClose)
         );
 
-        elm.toggle.addEventListener('touch', () =>
-            toggleMedias(elm.block, elm.toggleOpen, elm.toggleClose)
+        el.toggle.addEventListener('touch', () =>
+            toggleMedias(el.block, el.toggleOpen, el.toggleClose)
         );
     });
 }
+
+eventToggleMedias()

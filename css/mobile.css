@@ -283,11 +283,8 @@ hr {
     margin-top: 0.8rem;
 }
 
-.card-img-only {
+.block-medias card img{
     padding: 0;
-}
-
-.card-img-only img{
     width: 100vw;
     height: 100%;
     object-fit: cover;

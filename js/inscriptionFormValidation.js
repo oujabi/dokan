@@ -1,49 +1,8 @@
-function event() {
-    document.addEventListener('DOMContentLoaded', () => {
-        //Reset empty value textarea.
-        const textarea = document.querySelector('textarea');
-        if (!textarea) return
-        textarea.value = '';
+const inscriptionFormValidation = () => {
+    const textarea = document.querySelector('textarea');
+    if (!textarea) return
+    textarea.value = '';
 
-        //Toggle mobile menu.
-        const burgerMenu = document.querySelector('.burger-menu');
-        if (!burgerMenu) return;
-        burgerMenu.addEventListener('click', openNav);
-        burgerMenu.addEventListener('touch', openNav);
-
-        const burgerMenuClose = document.querySelector('.burger-menu-close');
-        if (!burgerMenuClose) return;
-        burgerMenuClose.addEventListener('click', closeNav);
-        burgerMenuClose.addEventListener('touch', closeNav);
-
-        const burgerMenuArea = document.querySelector('.burger-menu-close-area');
-        if (!burgerMenuArea) return;
-        burgerMenuArea.addEventListener('click', closeNav);
-        burgerMenuArea.addEventListener('touch', closeNav);
-
-        function closeNav() {
-            if (document.querySelector('nav').className !== 'mobile-nav') return;
-
-            document.querySelector('.burger-menu').style.display = "flex";
-            document.querySelector('.burger-menu-close').style.display = "none";
-            document.querySelector('.burger-menu-close-area').style.display = "none";
-            document.querySelector('nav').classList.remove("mobile-nav");
-            document.querySelector('nav ul').classList.remove("mobile-nav-list");
-            document.querySelector('body').style.overflow = "visible";
-            document.querySelector('.dokan-logo').style.display = "block";
-        }
-        function openNav() {
-            document.querySelector('.burger-menu').style.display = "none";
-            document.querySelector('.burger-menu-close').style.display = "flex";
-            document.querySelector('.burger-menu-close-area').style.display = "block";
-            document.querySelector('nav').classList.add("mobile-nav");
-            document.querySelector('nav ul').classList.add("mobile-nav-list");
-            document.querySelector('body').style.overflow = "hidden";
-            document.querySelector('.dokan-logo').style.display = "none";
-        }
-
-
-    });
 
     //Send email form inscriptions.
     const inscriptionForm = document.querySelector(".formulaire-inscription");
@@ -85,7 +44,7 @@ function event() {
         emptyErrorManager(textareaMessage, "message", errorMessage);
     }
 
-    //Input Validation
+//Input Validation
     const inputPrenom = document.querySelector('input[name="prenom"]');
     const errorPrenom = document.querySelector('.error-prenom');
     inputPrenom.addEventListener('input', () => {
@@ -172,7 +131,7 @@ function event() {
         fetch(rootSendMailTest+'/send-email', {
             method: 'POST',
             headers: {  'Content-Type': 'application/json',
-                        // 'Access-Control-Allow-Origin': '*'
+                // 'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify(emailData)
         }).then(response => response.json())
@@ -181,4 +140,3 @@ function event() {
     }
 }
 
-export default event;

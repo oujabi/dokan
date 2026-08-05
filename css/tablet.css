@@ -1,7 +1,7 @@
 /* ------------ Tablet portrait ------------ */
 @media (min-width: 750px) {
 /* ------------ Page: Dokan ------------ */
-    .block-list-card {
+    .block-card {
         justify-content: space-around;
         flex-direction: row;
         width: 83vw;
