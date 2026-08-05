@@ -1,23 +1,15 @@
 @media (min-width: 1200px) {
-    /* Navigation */
+    /*--- Navigation ---*/
     nav ul {
+        width: 35vw;
         display: flex;
         justify-content: space-around;
         align-items: center;
-
-        width: 35vw;
-    }
-
-    nav ul li a {
-        font-size: 1.3rem;
     }
 
     nav ul li:hover {
-        color: var(--budo-red)
-    }
+        color: var(--budo-red);
 
-    .burger-menu, .burger-menu-close {
-        display: none;
     }
 
     .active {
@@ -28,20 +20,10 @@
         top: 8px;
         right: 3px;
     }
-    
-    /* ------------ Landing-page ------------ */
-    .landing-page {
-        background-image:
-                var(--landing-gradient-filter),
-                url("../assets/1117604-1920x1080-desktop-full-hd-aikido-wallpaper-image.jpg");
-    }
 
-    .citation-landing-page {
-        width: 33rem;
-    }
 
-    .citation-landing-page > span {
-        margin-top: 1rem;
+    .burger-menu, .burger-menu-close {
+        display: none;
     }
 
     .button-wrapper-landing-page button:hover {
@@ -53,7 +35,12 @@
         color: #333030;
     }
 
-    /* ------------ Dokan ------------ */
+    /*---Titles ---*/
+    h2 {
+        width: 100vw;
+    }
+
+    /*--- Texts ---*/
     .block-text {
         display: flex;
         flex-direction: row;
@@ -61,15 +48,29 @@
         justify-content: space-around;
     }
 
-    .block-text h2 {
-        width: 100vw;
-        margin-top: 3vh;
-        margin-bottom: 3vh;
-    }
 
     .block-text p {
+        width: 40rem;
         height: 22rem;
         font-size: 1.2rem;
+    }
+
+    .block-text-img-right h2 {
+        order: 1;
+        text-align: left;
+        padding-left: 7.7rem;
+    }
+
+    .block-text-img-right p {
+        order: 2;
+    }
+
+    .block-text-img-right img {
+        order: 3;
+    }
+
+    .block-text-img-left h2 {
+        padding-left: 15rem;
     }
 
     .small-hr-left {
@@ -90,38 +91,11 @@
         box-shadow: var(--box-shadow-element);
     }
 
-    .block-text .illustration {
-        width: 38rem;
-    }
-
-    .block-text p {
-        width: 50rem;
-    }
-
-    .block-text-dokan-img-right h2 {
-        text-align: left;
-        padding-left: 14rem;
-        order: 2
-    }
-
-    .block-text-dokan-img-left h2 {
-        text-align: right;
-        padding-right: 15rem;
-        order: 1
-    }
-
-    .block-text-dokan-img-right p {
-        order: 3
-    }
-
-    .block-text-dokan-img-right .illustration {
-        margin-bottom: 4vh;
-        order: 2
-    }
-
-    .block-text-dokan-img-left .illustration {
-        margin-bottom: 4vh;
-        order: 2
+    /*--- Forms ---*/
+    input[type="submit"]:hover {
+        color: var(--gold-citation);
+        box-shadow: var(--box-shadow-hover-submit);
+        border: solid var(--gold-citation) 1px;
     }
 }
 

@@ -141,6 +141,17 @@ nav ul {
     display: none;
 }
 
+nav ul li .active {
+    position: relative;
+    width: 82px;
+    top: 10px;
+    text-align: center;
+    height: 48px;
+    padding-top: 6px;
+    font-weight: 400;
+    color: var(--budo-red);
+}
+
 .mobile-nav {
     position: absolute;
     top: 0;
@@ -219,6 +230,13 @@ h3 {
     align-items: center;
 }
 
+.block-text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .block-text img {
     width: 20rem;
     margin-top: 1vh;
@@ -229,6 +247,9 @@ h3 {
 p {
     font-family: var(--font-stack-text), sans-serif;
     font-size: 0.8rem;
+    margin-top: 0.3rem;
+    padding: 0.5rem;
+    text-align: justify;
 }
 
 .block-text p {
@@ -252,12 +273,31 @@ hr {
     box-shadow: var(--box-shadow-element);
 }
 
+/*--- Logo ---*/
+.block-logo {
+    width: 20rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.block-logo img {
+    width: 15rem;
+}
+
+.block-logo a:nth-child(2) {
+    margin-top: 7px;
+}
+
+.facebook svg {
+    margin-left: 4rem;
+}
+
 /*--- Cards ---*/
 .block-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 8vh;
+    margin-top: 4vh;
 }
 
 .card {
@@ -265,7 +305,7 @@ hr {
     flex-direction: column;
     align-items: center;
     width: 20rem;
-    height: 25rem;
+    height: 28rem;
     padding: 0.8rem;
     border-radius: 10px;
     background: var(--ancient-paper-white);
@@ -283,8 +323,11 @@ hr {
     margin-top: 0.8rem;
 }
 
-.block-medias card img{
+.card-single-img {
     padding: 0;
+}
+
+.card-single-img img {
     width: 100vw;
     height: 100%;
     object-fit: cover;
@@ -292,209 +335,7 @@ hr {
     border-radius: inherit;
 }
 
-video {
-    width: 22rem;
-    margin-top: 2rem;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow-element);
-    object-fit: cover;
-}
-
-/*--- Forms ---*/
-.formulaire-inscription {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.fieldset {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.formulaire-inscription select[name="object"] {
-    width: 40vw;
-    height: 2.2rem;
-    padding: 0.5rem;
-    background-color: var(--ancient-paper-white);
-    border-radius: 5px;
-}
-
-.formulaire-inscription .form-group input  {
-    width: 90vw;
-    height: 1.8rem;
-    padding: 0.5rem;
-}
-
-.formulaire-inscription .form-group input[type="submit"] {
-    width: 90vw;
-    height: 2rem;
-}
-
-.formulaire-inscription input, .formulaire-inscription textarea {
-    height: 30px;
-    background-color: var(--ancient-paper-white);
-    border-radius: 5px;
-}
-
-.formulaire-inscription textarea {
-    width: 90vw;
-    height: 20vh;
-    background-color: var(--ancient-paper-white);
-    padding: 0.5rem;
-}
-
-label {
-    display: block;
-    margin-bottom: 3px;
-}
-
-.form-group {
-    margin-bottom: 2vh;
-}
-
-input[type="submit"] {
-    text-align: center;
-    height: 2.4rem;
-    margin-top: 2.5vh;
-}
-
-.required {
-    color: var(--budo-red);
-}
-
-/*-- When page is displayed --*/
-.formulaire-inscription input:placeholder-shown:not(:focus),
-.formulaire-inscription textarea:placeholder-shown:not(:focus),
-select[name="object"]
-{
-    box-shadow: none;
-    border: solid #a3a3a3 1px;
-}
-
-/*-- Check validity --*/
-.formulaire-inscription textarea:valid,.formulaire-inscription  input:valid {
-    box-shadow: var(--box-shadow-input-valid);
-    border: solid var(--green-herb) 1px;
-}
-
-.formulaire-inscription textarea:invalid, .formulaire-inscription input:invalid {
-    box-shadow: var(--box-shadow-input-invalid);
-    border: solid var(--budo-red) 1px;
-}
-
-/*-- Send Formulaire --*/
-input[type="submit"]:valid, input[type="submit"]:invalid {
-    box-shadow: var(--box-shadow-element);
-}
-
-input[type="submit"]:hover {
-    color: var(--gold-citation);
-    box-shadow: var(--box-shadow-hover-submit);
-    border: solid var(--gold-citation) 1px;
-}
-
-input[type="submit"]:active {
-    box-shadow: none;
-}
-
-fieldset {
-    -webkit-appearance: none;
-}
-
-/*-- Error message styles --*/
-.error {
-    display: block;
-    margin-top: 0.35rem;
-    color: var(--budo-red);
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-/* ------------ Landing-page ------------ */
-.landing-page {
-    background-image:
-            var(--landing-gradient-filter),
-            url("../assets/tamurasensei.jpg");
-    background-size: cover;
-    background-blend-mode: hard-light;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.landing-page main {
-    margin-top: 45vh;
-}
-
-.citation-landing-page {
-    width: 22rem;
-    height: 10rem;
-    color: var(--gold-citation);
-    font-family: 'Junge', cursive;
-    font-size: 1rem;
-    margin-bottom: 8vh;
-    margin-left: 3vw;
-}
-
-.citation-landing-page > p {
-    text-align: left;
-}
-
-.citation-landing-page > span {
-    display: block;
-    width: 98%;
-    text-align: right;
-    font-style: italic;
-}
-
-.button-wrapper-landing-page {
-    display: flex;
-    justify-content: center;
-}
-
-.button-wrapper-landing-page button {
-    background-color: var(--dark-bg-nav);
-    width: 90px;
-    height: 32px;
-    border-radius: 6px;
-    border-top: solid var(--gold-citation) 2px;
-    border-bottom: var(--gold-citation) 2px solid;
-    color: var(--ancient-paper-white);
-    text-align: center;
-}
-
-/* ------------ Dokan page ------------ */
-
-@media (orientation: landscape) {
-    /* ------------ Landing-page landscape ------------ */
-    .landing-page {
-        background-image: var(--landing-gradient-filter),
-        url("../assets/1117604-1920x1080-desktop-full-hd-aikido-wallpaper-image.jpg");
-    }
-
-    .citation-landing-page {
-        margin-bottom: 0;
-    }
-
-    /* ------------ Dokan page landscape ------------ */
-
-}
-
-/*--- Médias page ---*/
-.medias-main {
-    margin-bottom: 7vh;
-}
-
-.block-medias {
-    display: none;
-}
-
+/*--- toggle-bar ---*/
 .toggle-block {
     width: 100vw;
     height: 4rem;
@@ -553,92 +394,165 @@ fieldset {
     transform: rotate(45deg);
 }
 
-.active {
-    position: relative;
-    width: 82px;
-    top: 10px;
-    text-align: center;
-    height: 48px;
-    padding-top: 6px;
-    font-weight: 400;
+/*--- Médias ---*/
+.block-medias {
+    display: none;
 }
 
-.active > a {
-    pointer-events: none;
-}
-
-.mobile-nav li a[class="active"] {
-    color: var(--budo-red);
-}
-
-/* ------------ Infos pratiques ------------ */
-.infos-pratiques-main {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.block-infos-pratiques {
-    margin-bottom: 3vh;
-}
-
-.block-infos-pratiques .block-adresse, .block-infos-pratiques .reseaux-sociaux {
+video {
+    width: 22rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-element);
+    object-fit: cover;
     margin-bottom: 4vh;
 }
 
-.block-infos-pratiques div p {
+/*--- Forms ---*/
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4vh;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5vh;
+}
+
+input, textarea, select {
+    width: 22rem;
+    height: 1.8rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    height: 2.2rem;
+    margin-top: 2.5vh;
     text-align: center;
 }
 
-.block-logo-reseau {
-    width: 11rem;
-    display: flex;
-    justify-content: space-around;
+input[type="submit"]:active {
+    box-shadow: none;
 }
 
-.reseaux-sociaux {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+select {
+    height: 2.2rem;
 }
 
-.instagram {
+textarea {
+    height: 20vh;
+}
+
+form input:placeholder-shown:not(:focus),
+form textarea:placeholder-shown:not(:focus),
+form select[name="object"] {
+    box-shadow: none;
+    border: solid #a3a3a3 1px;
+}
+
+.form-group {
+    margin-bottom: 2vh;
+}
+
+/*-- Form validity --*/
+.required {
+    color: var(--budo-red);
+}
+
+form textarea:valid,
+form input:valid {
+    box-shadow: var(--box-shadow-input-valid);
+    border: solid var(--green-herb) 1px;
+}
+
+form textarea:invalid,
+form input:invalid {
+    box-shadow: var(--box-shadow-input-invalid);
+    border: solid var(--budo-red) 1px;
+}
+
+input[type="submit"]:valid,
+input[type="submit"]:invalid {
+    box-shadow: var(--box-shadow-element);
+}
+
+.error {
+    display: block;
     margin-top: 0.35rem;
+    color: var(--budo-red);
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
-/* ------------ Partenaires ------------ */
-.block-partenaires {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2vh;
+/* ------------ Landing-page ------------ */
+.landing-page {
+    background-image:
+            var(--landing-gradient-filter),
+            url("../assets/tamurasensei.jpg");
+    background-size: cover;
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.block-partenaire-text {
-    margin-top: 1vh;
-    margin-bottom: 2vh;
+.landing-page main {
+    margin-top: 45vh;
+}
+
+.citation-landing-page {
+    width: 22rem;
+    height: 10rem;
+    color: var(--gold-citation);
+    font-family: 'Junge', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 8vh;
     margin-left: 3vw;
 }
 
-.block-partenaire-logo {
-    width: 22rem;
+.citation-landing-page > span {
+    display: block;
+    width: 98%;
+    text-align: right;
+    font-style: italic;
+}
+
+.button-wrapper-landing-page {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.block-partenaire-logo a:nth-child(2) {
-    margin-top: 7px;
+.button-wrapper-landing-page button {
+    background-color: var(--dark-bg-nav);
+    width: 90px;
+    height: 32px;
+    border-radius: 6px;
+    border-top: solid var(--gold-citation) 2px;
+    border-bottom: var(--gold-citation) 2px solid;
+    color: var(--ancient-paper-white);
+    text-align: center;
+}
+
+@media (orientation: landscape) {
+/*--- Landing-page ---*/
+    .landing-page {
+        background-image: var(--landing-gradient-filter),
+        url("../assets/1117604-1920x1080-desktop-full-hd-aikido-wallpaper-image.jpg");
+    }
+
+    .citation-landing-page {
+        margin-bottom: 0;
+    }
 }
 
 
-.block-partenaire-logo img {
-    width: 9rem;
-    margin-bottom: 1vh;
-}
 
 
 

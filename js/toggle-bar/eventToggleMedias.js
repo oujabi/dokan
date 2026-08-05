@@ -26,8 +26,6 @@ export const eventToggleMedias = () => {
     ];
 
     elsArr.map(el => {
-        if (!el.block || !el.toggle || !el.toggleOpen || !el.toggleClose) return
-
         el.toggle.addEventListener('click', () =>
             toggleMedias(el.block, el.toggleOpen, el.toggleClose)
         );
