@@ -38,10 +38,13 @@
     .block-partenaire-text {
         width: 40rem;
     }
+
+    /* ------------ Tablet landscape ------------ */
+    @media  (orientation: landscape) {
+
+
+    }
 }
 
-/* ------------ Tablet landscape ------------ */
-@media (min-width: var(--tablet-width)) and (orientation: landscape) {
 
 
-}

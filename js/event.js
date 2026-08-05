@@ -1,5 +1,10 @@
 function event() {
     document.addEventListener('DOMContentLoaded', () => {
+        //Reset empty value textarea.
+        const textarea = document.querySelector('textarea');
+        if (!textarea) return
+        textarea.value = '';
+
         //Toggle mobile menu.
         const burgerMenu = document.querySelector('.burger-menu');
         if (!burgerMenu) return;
@@ -37,76 +42,12 @@ function event() {
             document.querySelector('.dokan-logo').style.display = "none";
         }
 
-        //Toggle medias.
-        const headerIllustration = document.querySelector('.header-block-medias-illustrations');
-        if (!headerIllustration) return;
-        headerIllustration.addEventListener('click', () => {
-           toggleIllustration()
-        });
-        headerIllustration.addEventListener('touch', () => {
-            toggleIllustration();
-        });
-        function toggleIllustration() {
-            const bodyIllustration = document.querySelector('.body-block-medias-illustrations');
-            if(bodyIllustration.style.display === "block") {
-                bodyIllustration.style.display = "none";
-                document.querySelector('.open-toggle-illustrations').style.display = "none";
-                document.querySelector('.close-toggle-illustrations').style.display = "flex";
-            } else {
-                bodyIllustration.style.display = "block";
-                document.querySelector('.open-toggle-illustrations').style.display = "flex";
-                document.querySelector('.close-toggle-illustrations').style.display = "none";
-            }
-        }
 
-        const headerPictures = document.querySelector('.header-block-medias-pictures');
-        if (!headerPictures) return;
-        headerPictures.addEventListener('click', () => {
-            togglePictures();
-        });
-        headerPictures.addEventListener('touch', () => {
-            togglePictures();
-        });
-        function togglePictures() {
-            const bodyPictures = document.querySelector('.body-block-medias-pictures');
-            if (bodyPictures.style.display === "block") {
-                bodyPictures.style.display = "none";
-                document.querySelector('.open-toggle-pictures').style.display = "none";
-                document.querySelector('.close-toggle-pictures').style.display = "flex";
-            } else {
-                bodyPictures.style.display = "block";
-                document.querySelector('.open-toggle-pictures').style.display = "flex";
-                document.querySelector('.close-toggle-pictures').style.display = "none";
-            }
-        }
-
-        const headerVideo = document.querySelector('.header-block-medias-videos');
-        if (!headerVideo) return;
-        headerVideo.addEventListener('click', () => {
-            toggleVideos()
-        });
-        headerVideo.addEventListener('touch', () => {
-          toggleVideos()
-        });
-        function toggleVideos() {
-            const bodyVideos = document.querySelector('.body-block-medias-videos');
-            if (bodyVideos.style.display === "block") {
-                bodyVideos.style.display = "none";
-                document.querySelector('.open-toggle-videos').style.display = "none";
-                document.querySelector('.close-toggle-videos').style.display = "flex";
-            } else {
-                bodyVideos.style.display = "block";
-                document.querySelector('.open-toggle-videos').style.display = "flex";
-                document.querySelector('.close-toggle-videos').style.display = "none";
-            }
-        }
     });
-
-    //Reset empty value by default of textarea.
-    document.querySelector('textarea').value = '';
 
     //Send email form inscriptions.
     const inscriptionForm = document.querySelector(".formulaire-inscription");
+    if (!inscriptionForm) return;
     inscriptionForm.addEventListener('submit', (event) => {
         event.preventDefault();
         formInscriptionValidity();

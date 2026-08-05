@@ -1,202 +1,309 @@
-/* ------------ Landing-page ------------ */
-.landing-page {
-    background-image:
-            var(--landing-gradient-filter),
-            url("../assets/tamurasensei.jpg");
-    background-size: cover;
-    background-blend-mode: hard-light;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+/*--- Unreset ---*/
+hr {
+    all: revert;
 }
 
-.landing-page main {
-    margin-top: 45vh;
+/*--- Fonts ---*/
+@font-face {
+    font-family: 'Junge';
+    src:
+            local('Junge'),
+            url('../fonts/Junge-Regular.ttf');
 }
 
-.citation-landing-page {
-    width: 22rem;
-    height: 10rem;
-    color: var(--gold-citation);
-    font-family: 'Junge', cursive;
-    font-size: 1rem;
-    margin-bottom: 8vh;
-    margin-left: 3vw;
+@font-face {
+    font-family: 'Roboto';
+    src:
+            local('Roboto'),
+            url('../fonts/Roboto-Regular.ttf');
 }
 
-.citation-landing-page > p {
-    text-align: left;
+/*--- Variables ---*/
+:root {
+    /*-- Fonts --*/
+    --font-stack-title: 'Junge', sans-serif;
+    --font-stack-text: 'Roboto', sans-serif;
+
+    /*-- Colors --*/
+    /* Main colors set */
+    --budo-red: #B8221C;
+    --ancient-paper-white: #fdfdfd;
+    --gold-citation: #feac13f2;
+
+    /* Background-color & shadow colors elements set*/
+    --dark-bg-nav: #252222;
+    --shadow-bg-nav: #2B0B0B;
+    --shadow-bg-element: #5a5252b3;
+
+    /* Form validation colors set */
+    --green-herb: #12540bb5;
+    --emergency-dark: #974242ab;
+
+    /* Border preset */
+    --nav-border: var(--budo-red) 1px solid;
+    --border-radius-nav: 0 0 10px 10px;
+
+    /* Box-shadow preset */
+    --box-shadow-nav: 0 9px 20px var(--shadow-bg-nav);
+    --box-shadow-element: 8px 5px 10px var(--shadow-bg-element);
+
+    /* Box-shadow preset: inscription form */
+    --box-shadow-input-valid: 8px 5px 10px var(--green-herb);
+    --box-shadow-input-invalid: 8px 5px 10px var(--emergency-dark);
+    --box-shadow-hover-submit: 8px 5px 10px var(--gold-citation);
+
+    /* gradient */
+    --landing-gradient-filter: linear-gradient(#332e2e);
 }
 
-.citation-landing-page > span {
-    display: block;
-    width: 98%;
-    text-align: right;
-    font-style: italic;
-}
+/*--- Navigation ---*/
+header {
+    position: fixed;
+    top: 0;
 
-.button-wrapper-landing-page {
     display: flex;
-    justify-content: center;
-}
+    justify-content: space-between;
+    align-items: center;
 
-.button-wrapper-landing-page button {
-    background-color: var(--dark-bg-nav);
-    width: 90px;
-    height: 32px;
-    border-radius: 6px;
-    border-top: solid var(--gold-citation) 2px;
-    border-bottom: var(--gold-citation) 2px solid;
+    width: 100%;
+    height: 4rem;
+    padding: 1.3rem;
+    border-radius: 0 0 10px 10px;
+
     color: var(--ancient-paper-white);
-    text-align: center;
+    background-color: var(--dark-bg-nav);
+    border-bottom: var(--budo-red) 1px solid;
+    box-shadow: var(--box-shadow-nav);
 }
 
-/* ------------ Dokan page ------------ */
-.block-text-dokan {
+/*-- Nav Logo --*/
+.dokan-logo {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-top: 0.5vh;
+}
+
+/*-- Burger-Menu --*/
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-menu-line {
+    position: relative;
+    width: 25px;
+    height: 2px;
+    background-color: #b8221c;
+    margin: 3px auto;
+}
+
+.burger-menu-close {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    right: 0;
+    width: 38px;
+}
+
+.burger-menu-close .burger-menu-line:nth-child(1) {
+    transform: rotate(45deg);
+    margin-bottom: -1px;
+    margin-top: 1px;
+}
+
+.burger-menu-close .burger-menu-line:nth-child(2) {
+    transform: rotate(-45deg);
+    margin-top: -1px;
+}
+
+.burger-menu-close-area {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 200vh;
+    background-color: #FFFFFF00;
+    left: 18rem;
+    top: 4rem;
+}
+
+/*-- Nav list --*/
+nav ul {
+    display: none;
+}
+
+.mobile-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 18rem;
+    height: 100vh;
+
+    background-color: var(--dark-bg-nav);
+    border-radius: 0 10px 10px 0;
+    border-right: var(--nav-border);
+}
+
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav-list li {
+    display: flex;
+    align-items: center;
+
+    height: 4rem;
+    padding-left: 5vw;
+
+    border-bottom: var(--nav-border);
+}
+
+.mobile-nav-list li a {
+    font-size: 1.2rem;
+    color: var(--ancient-paper-white);
+    font-family:'Roboto', sans-serif;
+}
+
+.mobile-nav li:last-child {
+    border-bottom: none;
+}
+
+/*--- Main ---*/
+main {
+    margin-bottom: 20vh;
+}
+
+/*--- Titles ---*/
+h1 {
+    font-family: var(--font-stack-title), sans-serif;
+    color: var(--budo-red);
+    text-align: center;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-top: 12vh
+}
+
+h2 {
+    font-family: var(--font-stack-title), sans-serif;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-top: 8vh;
+}
+
+h3 {
+    font-family: var(--font-stack-title), sans-serif;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+/*--- Texts ---*/
+.block-text {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.block-text-dokan img {
+.block-text img {
     width: 20rem;
     margin-top: 1vh;
     border-radius: 10px;
     box-shadow: var(--box-shadow-element);
 }
 
-.block-text-dokan p {
+p {
+    font-family: var(--font-stack-text), sans-serif;
+    font-size: 0.8rem;
+}
+
+.block-text p {
     width: 20rem;
     margin-top: 2vh;
 }
 
-@media (orientation: landscape) {
-    /* ------------ Landing-page landscape ------------ */
-    .landing-page {
-        background-image: var(--landing-gradient-filter),
-        url("../assets/1117604-1920x1080-desktop-full-hd-aikido-wallpaper-image.jpg");
-    }
-
-    .citation-landing-page {
-        margin-bottom: 0;
-    }
-
-    /* ------------ Dokan page landscape ------------ */
+hr {
+    border: none;
 }
 
-/* ------------ Page: Stages de la saison ------------ */
-.stage-saison-card {
+.small-hr-right, .small-hr-left {
+    display: none;
+}
+
+.large-hr {
+    display: block;
+    width: 90vw;
+    height: 0.22rem;
+    background-color: var(--budo-red);
+    box-shadow: var(--box-shadow-element);
+}
+
+/*--- Cards ---*/
+.block-card {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 21rem;
-    height: 40rem;
-    box-shadow: 8px 5px 10px #5a5252b3;
+    margin-top: 8vh;
 }
 
-.stage-saison-card img {
-    padding-top: 0;
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 25rem;
+    padding: 0.8rem;
+    border-radius: 10px;
+    background: var(--ancient-paper-white);
+    box-shadow: var(--box-shadow-element);
     border-top: solid var(--shadow-bg-element) 1px;
-    border-bottom: solid var(--shadow-bg-element) 1px;
+    border-left: solid var(--shadow-bg-element) 1px;
+    margin-bottom: 4vh;
+}
+
+.card h3 {
+    margin-top: 1rem;
+}
+
+.card p {
+    margin-top: 0.8rem;
+}
+
+.card-img-only {
+    padding: 0;
+}
+
+.card-img-only img{
+    width: 100vw;
+    height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: inherit;
 }
 
-.stage-city-name {
-    margin-top: 1.5rem;
-    font-family: 'Junge', cursive;
-    font-size: 1.3rem;
-}
-
-.header-stage-card {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.8rem;
-    height: 1rem;
-
-}
-
-.header-stage-card hr {
-    width: 5rem;
-    height: 0.1rem;
-    background-color: black;
-
-}
-
-.block-header-stage-card {
-    margin: 0 1rem;
-}
-/*--- Médias page ---*/
-
-.medias-main {
-    margin-bottom: 7vh;
-}
-
-.header-block-medias {
-    width: 100vw;
-    height: 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--budo-red);
-    border-bottom: solid black 1px;
-    border-top: solid black 1px;
-    font-weight: 800;
-    margin-bottom: 4vh;
-    color: var(--ancient-paper-white);
-    padding-left: 8vw;
-    padding-right: 2vh;
-}
-
-.header-block-medias > h2 {
-    width: 12rem;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    align-content: center;
-    text-align: left;
-}
-
-.block-toggle-medias {
-    display: flex;
-}
-
-.toggle-medias {
-    background-color: var(--ancient-paper-white);
-    width: 1.7rem;
-    height: 0.22rem;
+video {
+    width: 22rem;
+    margin-top: 2rem;
     border-radius: 10px;
+    box-shadow: var(--box-shadow-element);
+    object-fit: cover;
 }
 
-.open-toggle-illustrations,
-.open-toggle-videos,
-.open-toggle-pictures {
-    display: none;
-}
-
-.body-block-medias {
-    display: none;
-}
-
-.open-toggle-left {
-    transform: rotate(45deg);
-    margin-right: -10px;
-}
-
-.open-toggle-right {
-    transform: rotate(-45deg);
-}
-
-.close-toggle-left {
-    transform: rotate(-45deg);
-    margin-right: -10px;
-}
-
-.close-toggle-right {
-    transform: rotate(45deg);
-}
-
-/* ------------ Inscription ------------ */
+/*--- Forms ---*/
 .formulaire-inscription {
     display: flex;
     justify-content: center;
@@ -261,46 +368,11 @@ input[type="submit"] {
     margin-top: 2.5vh;
 }
 
-.active {
-    position: relative;
-    width: 82px;
-    top: 10px;
-    text-align: center;
-    height: 48px;
-    padding-top: 6px;
-    font-weight: 400;
-}
-
-.active > a {
-    pointer-events: none;
-}
-
-.mobile-nav li a[class="active"] {
-    color: var(--budo-red);
-}
-
-.not-active:hover{
-    position: relative;
-    width: 82px;
-    top: 10px;
-    color: rgb(213 53 46 / 0.86);
-    height: 48px;
-    text-align: center;
-    padding-top: 6px;
-    font-weight: bold;
-}
-
-/*---------- Formulaire d'inscription ---------*/
 .required {
     color: var(--budo-red);
 }
 
-video {
-    box-shadow: var(--box-shadow-element);
-    object-fit: cover;
-}
-
-/*----------- When page is displayed ---------*/
+/*-- When page is displayed --*/
 .formulaire-inscription input:placeholder-shown:not(:focus),
 .formulaire-inscription textarea:placeholder-shown:not(:focus),
 select[name="object"]
@@ -309,7 +381,7 @@ select[name="object"]
     border: solid #a3a3a3 1px;
 }
 
-/*----------- Check validity ---------*/
+/*-- Check validity --*/
 .formulaire-inscription textarea:valid,.formulaire-inscription  input:valid {
     box-shadow: var(--box-shadow-input-valid);
     border: solid var(--green-herb) 1px;
@@ -320,7 +392,7 @@ select[name="object"]
     border: solid var(--budo-red) 1px;
 }
 
-/*----------- Send Formulaire ---------*/
+/*-- Send Formulaire --*/
 input[type="submit"]:valid, input[type="submit"]:invalid {
     box-shadow: var(--box-shadow-element);
 }
@@ -339,7 +411,7 @@ fieldset {
     -webkit-appearance: none;
 }
 
-/*--------- Error message styles ---------*/
+/*-- Error message styles --*/
 .error {
     display: block;
     margin-top: 0.35rem;
@@ -348,6 +420,159 @@ fieldset {
     font-weight: 600;
 }
 
+/* ------------ Landing-page ------------ */
+.landing-page {
+    background-image:
+            var(--landing-gradient-filter),
+            url("../assets/tamurasensei.jpg");
+    background-size: cover;
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.landing-page main {
+    margin-top: 45vh;
+}
+
+.citation-landing-page {
+    width: 22rem;
+    height: 10rem;
+    color: var(--gold-citation);
+    font-family: 'Junge', cursive;
+    font-size: 1rem;
+    margin-bottom: 8vh;
+    margin-left: 3vw;
+}
+
+.citation-landing-page > p {
+    text-align: left;
+}
+
+.citation-landing-page > span {
+    display: block;
+    width: 98%;
+    text-align: right;
+    font-style: italic;
+}
+
+.button-wrapper-landing-page {
+    display: flex;
+    justify-content: center;
+}
+
+.button-wrapper-landing-page button {
+    background-color: var(--dark-bg-nav);
+    width: 90px;
+    height: 32px;
+    border-radius: 6px;
+    border-top: solid var(--gold-citation) 2px;
+    border-bottom: var(--gold-citation) 2px solid;
+    color: var(--ancient-paper-white);
+    text-align: center;
+}
+
+/* ------------ Dokan page ------------ */
+
+@media (orientation: landscape) {
+    /* ------------ Landing-page landscape ------------ */
+    .landing-page {
+        background-image: var(--landing-gradient-filter),
+        url("../assets/1117604-1920x1080-desktop-full-hd-aikido-wallpaper-image.jpg");
+    }
+
+    .citation-landing-page {
+        margin-bottom: 0;
+    }
+
+    /* ------------ Dokan page landscape ------------ */
+
+}
+
+/*--- Médias page ---*/
+.medias-main {
+    margin-bottom: 7vh;
+}
+
+.block-medias {
+    display: none;
+}
+
+.toggle-block {
+    width: 100vw;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--budo-red);
+    border-bottom: solid black 1px;
+    border-top: solid black 1px;
+    font-weight: 800;
+    color: var(--ancient-paper-white);
+    padding-left: 8vw;
+    padding-right: 2vh;
+}
+
+.toggle-block > h2 {
+    width: 12rem;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+    text-align: left;
+}
+
+.toggle-medias {
+    background-color: var(--ancient-paper-white);
+    width: 1.7rem;
+    height: 0.22rem;
+    border-radius: 10px;
+}
+
+.open-toggle {
+    display: none;
+}
+
+.close-toggle
+{
+    display: flex;
+}
+
+.open-toggle-left {
+    transform: rotate(45deg);
+    margin-right: -10px;
+}
+
+.open-toggle-right {
+    transform: rotate(-45deg);
+}
+
+.close-toggle-left {
+    transform: rotate(-45deg);
+    margin-right: -10px;
+}
+
+.close-toggle-right {
+    transform: rotate(45deg);
+}
+
+.active {
+    position: relative;
+    width: 82px;
+    top: 10px;
+    text-align: center;
+    height: 48px;
+    padding-top: 6px;
+    font-weight: 400;
+}
+
+.active > a {
+    pointer-events: none;
+}
+
+.mobile-nav li a[class="active"] {
+    color: var(--budo-red);
+}
 
 /* ------------ Infos pratiques ------------ */
 .infos-pratiques-main {
@@ -387,7 +612,6 @@ fieldset {
 }
 
 /* ------------ Partenaires ------------ */
-
 .block-partenaires {
     display: flex;
     flex-direction: column;
@@ -419,42 +643,5 @@ fieldset {
     margin-bottom: 1vh;
 }
 
-.heritage-card, .team-card {
-    width: 21rem;
-    height: 30rem;
-}
-
-.heritage-card p {
-    margin-top: 2rem;
-    padding: 0 1rem;
-}
-
-.media-card {
-    width: 21rem;
-    height: 30rem;
-}
-
-.block-list-card-medias {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    width: 100vw;
-    flex-wrap: wrap;
-}
-
-.block-list-card-medias .media-card .img-media {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: inherit;
-}
-
-video {
-    width: 21rem;
-    margin-top: 2rem;
-    border-radius: 10px;
-}
 
 
