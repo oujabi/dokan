@@ -403,7 +403,7 @@ hr {
 }
 
 video {
-    width: 22rem;
+    width: 21rem;
     border-radius: 10px;
     box-shadow: var(--box-shadow-element);
     object-fit: cover;
@@ -447,7 +447,7 @@ input[type="submit"]:active {
 }
 
 select {
-    height: 2.2rem;
+    height: 2.3rem;
 }
 
 textarea {
@@ -485,6 +485,7 @@ form input:invalid {
 input[type="submit"]:valid,
 input[type="submit"]:invalid {
     box-shadow: var(--box-shadow-element);
+    border: solid #a3a3a3 1px;
 }
 
 .error {
