@@ -109,11 +109,22 @@
     .citation-landing-page {
         margin-right: 43vw;
     }
+
+    /*--- Info pratiques ---*/
+    iframe {
+        width: 44rem;
+    }
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
     h1 {
         margin-top: 12vh;
+    }
+
+    /*--- Info pratiques ---*/
+    iframe {
+        width: 60rem;
+        height: 25rem;
     }
 }
 

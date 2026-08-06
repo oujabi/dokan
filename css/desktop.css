@@ -78,5 +78,10 @@
         box-shadow: var(--box-shadow-hover-submit);
         border: solid var(--gold-citation) 1px;
     }
+
+    /*--- Info pratiques ---*/
+    iframe {
+        height: 35rem;
+    }
 }
 

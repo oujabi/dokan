@@ -569,6 +569,12 @@ input[type="submit"]:invalid {
     text-align: center;
 }
 
+/*--- Info pratiques ---*/
+iframe {
+    width: 22rem;
+    height: 20rem;
+}
+
 @media (orientation: landscape) {
 /*--- Titles ---*/
 h1 {
