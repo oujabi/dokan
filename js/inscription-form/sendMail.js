@@ -14,6 +14,8 @@ export const sendMail = (formData) => {
     };
 
     const rootSendMailTest = 'http://localhost:3000';
+    const infoValidSubmit = document.querySelector('.info-valid');
+    const infoInvalidSubmit = document.querySelector('.info-invalid');
 
     fetch(rootSendMailTest+'/send-email', {
         method: 'POST',
@@ -23,9 +25,10 @@ export const sendMail = (formData) => {
         body: JSON.stringify(emailData)
     }).then(response => {
         if (response.ok) {
-
-            window.location.reload();
+            infoValidSubmit.style.display = 'block';
+            setTimeout(() => {window.location.reload();}, 2500)
         } else {
+            infoInvalidSubmit.style.display = 'block';
             return response.json().then(err => {
                 throw new Error(err.message || 'Erreur serveur');
             });

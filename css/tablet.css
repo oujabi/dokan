@@ -86,12 +86,12 @@
         gap: 3rem;
     }
 
-    fieldset:last-child {
-        width: 37rem;
-        justify-content: flex-end;
+    .submit-fieldset {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        width: 36rem;
     }
-
-    fieldset:last-child {}
 
     .form-group input {
         width: 17rem;
