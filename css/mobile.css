@@ -1,0 +1,598 @@
+/*--- Unreset ---*/
+hr {
+    all: revert;
+}
+
+/*--- Fonts ---*/
+@font-face {
+    font-family: 'Junge';
+    src:
+            local('Junge'),
+            url('../fonts/Junge-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:
+            local('Roboto'),
+            url('../fonts/Roboto-Regular.ttf');
+}
+
+/*--- Variables ---*/
+:root {
+    /*-- Fonts --*/
+    --font-stack-title: 'Junge', sans-serif;
+    --font-stack-text: 'Roboto', sans-serif;
+
+    /*-- Colors --*/
+    /* Main colors set */
+    --budo-red: #B8221C;
+    --ancient-paper-white: #fdfdfd;
+    --gold-citation: #feac13f2;
+
+    /* Background-color & shadow colors elements set*/
+    --dark-bg-nav: #252222;
+    --shadow-bg-nav: #2B0B0B;
+    --shadow-bg-element: #5a5252b3;
+
+    /* Form validation colors set */
+    --green-herb: rgb(40 154 22 / 0.71);
+    --green-info-valid: rgb(30 117 16 / 71%);
+    --emergency-dark: #974242ab;
+
+    /* Border preset */
+    --nav-border: var(--budo-red) 1px solid;
+    --red-info-invalid: #b52c26e8;
+    --border-radius-nav: 0 0 10px 10px;
+
+    /* Box-shadow preset */
+    --box-shadow-nav: 0 9px 20px var(--shadow-bg-nav);
+    --box-shadow-element: 8px 5px 10px var(--shadow-bg-element);
+
+    /* Box-shadow preset: inscription form */
+    --box-shadow-input-valid: 8px 5px 10px var(--green-herb);
+    --box-shadow-input-invalid: 8px 5px 10px var(--emergency-dark);
+    --box-shadow-hover-submit: 8px 5px 10px var(--gold-citation);
+
+    /* gradient */
+    --landing-gradient-filter: linear-gradient(#332e2e);
+}
+
+/*--- Navigation ---*/
+header {
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 4rem;
+    padding: 1.3rem;
+    border-radius: 0 0 10px 10px;
+
+    color: var(--ancient-paper-white);
+    background-color: var(--dark-bg-nav);
+    border-bottom: var(--budo-red) 1px solid;
+    box-shadow: var(--box-shadow-nav);
+}
+
+/*-- Nav Logo --*/
+.dokan-logo {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-top: 0.5vh;
+}
+
+/*-- Burger-Menu --*/
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-menu-line {
+    position: relative;
+    width: 25px;
+    height: 2px;
+    background-color: #b8221c;
+    margin: 3px auto;
+}
+
+.burger-menu-close {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    right: 0;
+    width: 38px;
+}
+
+.burger-menu-close .burger-menu-line:nth-child(1) {
+    transform: rotate(45deg);
+    margin-bottom: -1px;
+    margin-top: 1px;
+}
+
+.burger-menu-close .burger-menu-line:nth-child(2) {
+    transform: rotate(-45deg);
+    margin-top: -1px;
+}
+
+.burger-menu-close-area {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 200vh;
+    background-color: #FFFFFF00;
+    left: 18rem;
+    top: 4rem;
+}
+
+/*-- Nav list --*/
+nav ul {
+    display: none;
+}
+
+nav ul li .active {
+    position: relative;
+    width: 82px;
+    top: 10px;
+    text-align: center;
+    height: 48px;
+    padding-top: 6px;
+    font-weight: 400;
+    color: var(--budo-red);
+}
+
+.mobile-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 18rem;
+    height: 100vh;
+
+    background-color: var(--dark-bg-nav);
+    border-radius: 0 10px 10px 0;
+    border-right: var(--nav-border);
+}
+
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav-list li {
+    display: flex;
+    align-items: center;
+
+    height: 4rem;
+    padding-left: 5vw;
+
+    border-bottom: var(--nav-border);
+}
+
+.mobile-nav-list li a {
+    font-size: 1.2rem;
+    color: var(--ancient-paper-white);
+    font-family:'Roboto', sans-serif;
+}
+
+.mobile-nav li:last-child {
+    border-bottom: none;
+}
+
+/*--- Main ---*/
+main {
+    margin-bottom: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*--- Titles ---*/
+h1 {
+    font-family: var(--font-stack-title), sans-serif;
+    color: var(--budo-red);
+    text-align: center;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-top: 12vh
+}
+
+h2 {
+    font-family: var(--font-stack-title), sans-serif;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-top: 8vh;
+}
+
+h3 {
+    font-family: var(--font-stack-title), sans-serif;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+/*--- Texts ---*/
+.block-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block-text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-text img {
+    width: 20rem;
+    margin-top: 1vh;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-element);
+}
+
+p {
+    font-family: var(--font-stack-text), sans-serif;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    padding: 0.5rem;
+    text-align: justify;
+}
+
+.block-text p {
+    width: 20rem;
+    margin-top: 2vh;
+}
+
+hr {
+    border: none;
+}
+
+.small-hr-right, .small-hr-left {
+    display: none;
+}
+
+.large-hr {
+    display: block;
+    width: 95vw;
+    height: 0.22rem;
+    background-color: var(--budo-red);
+    box-shadow: var(--box-shadow-element);
+}
+
+/*--- Logo ---*/
+.block-logo {
+    width: 20rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.block-logo img {
+    width: 15rem;
+}
+
+.block-logo a:nth-child(2) {
+    margin-top: 7px;
+}
+
+.facebook svg {
+    margin-left: 4rem;
+}
+
+/*--- Cards ---*/
+.block-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 28rem;
+    padding: 0.8rem;
+    border-radius: 10px;
+    background: var(--ancient-paper-white);
+    box-shadow: var(--box-shadow-element);
+    border-top: solid var(--shadow-bg-element) 1px;
+    border-left: solid var(--shadow-bg-element) 1px;
+    margin-bottom: 4vh;
+}
+
+.card h3 {
+    margin-top: 1rem;
+}
+
+.card p {
+    margin-top: 0.8rem;
+}
+
+.card-single-img {
+    padding: 0;
+}
+
+.card-single-img img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
+}
+
+/*--- toggle-bar ---*/
+.toggle-block {
+    width: 100vw;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--budo-red);
+    border-bottom: solid black 1px;
+    border-top: solid black 1px;
+    font-weight: 800;
+    color: var(--ancient-paper-white);
+    padding-left: 8vw;
+    padding-right: 2vh;
+}
+
+.toggle-block > h2 {
+    width: 12rem;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+    text-align: left;
+}
+
+.toggle-medias {
+    background-color: var(--ancient-paper-white);
+    width: 1.7rem;
+    height: 0.22rem;
+    border-radius: 10px;
+}
+
+.open-toggle {
+    display: none;
+}
+
+.close-toggle
+{
+    display: flex;
+}
+
+.open-toggle-left {
+    transform: rotate(45deg);
+    margin-right: -10px;
+}
+
+.open-toggle-right {
+    transform: rotate(-45deg);
+}
+
+.close-toggle-left {
+    transform: rotate(-45deg);
+    margin-right: -10px;
+}
+
+.close-toggle-right {
+    transform: rotate(45deg);
+}
+
+/*--- Médias ---*/
+.block-medias {
+    display: none;
+}
+
+video {
+    width: 21rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-element);
+    object-fit: cover;
+    margin-bottom: 4vh;
+}
+
+/*--- Forms ---*/
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4vh;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5vh;
+}
+
+input, textarea, select {
+    width: 22rem;
+    height: 1.8rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    height: 2.2rem;
+    margin-top: 2.5vh;
+    text-align: center;
+}
+
+input[type="submit"]:active {
+    box-shadow: none;
+}
+
+select {
+    height: 2.3rem;
+}
+
+textarea {
+    height: 20vh;
+}
+
+form input:placeholder-shown:not(:focus),
+form textarea:placeholder-shown:not(:focus),
+form select[name="object"] {
+    box-shadow: none;
+    border: solid #a3a3a3 1px;
+}
+
+.form-group {
+    margin-bottom: 2vh;
+}
+
+/*-- Form validity --*/
+.required {
+    color: var(--budo-red);
+}
+
+form textarea:valid,
+form input:valid {
+    box-shadow: var(--box-shadow-input-valid);
+    border: solid var(--green-herb) 1px;
+}
+
+form textarea:invalid,
+form input:invalid {
+    box-shadow: var(--box-shadow-input-invalid);
+    border: solid var(--budo-red) 1px;
+}
+
+input[type="submit"]:valid,
+input[type="submit"]:invalid {
+    box-shadow: var(--box-shadow-element);
+    border: solid #a3a3a3 1px;
+}
+
+.error {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--budo-red);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.form-info {
+    display: inline;
+    width: 30rem;
+    height: 2rem;
+    border: solid black 1px;
+    text-align: center;
+    padding-top: 0.3rem;
+    color: var(--ancient-paper-white);
+    font-size: 1.1rem;
+    border-radius: 10px;
+    margin-top: 0.8rem;
+}
+
+.info-valid {
+    background-color: var(--green-info-valid);
+    display: none;
+}
+
+.info-invalid {
+    background-color: var(--red-info-invalid);
+    display: none;
+}
+
+/* ------------ Landing-page ------------ */
+.landing-page {
+    background-image:
+            var(--landing-gradient-filter),
+            url("../assets/tamurasensei.jpg");
+    background-size: cover;
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.landing-page main {
+    margin-top: 45vh;
+}
+
+.citation-landing-page {
+    width: 22rem;
+    height: 10rem;
+    color: var(--gold-citation);
+    font-family: 'Junge', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 8vh;
+    margin-left: 3vw;
+}
+
+.citation-landing-page > span {
+    display: block;
+    width: 98%;
+    text-align: right;
+    font-style: italic;
+}
+
+.button-wrapper-landing-page {
+    display: flex;
+    justify-content: center;
+}
+
+.button-wrapper-landing-page button {
+    background-color: var(--dark-bg-nav);
+    width: 90px;
+    height: 32px;
+    border-radius: 6px;
+    border-top: solid var(--gold-citation) 2px;
+    border-bottom: var(--gold-citation) 2px solid;
+    color: var(--ancient-paper-white);
+    text-align: center;
+}
+
+/*--- Info pratiques ---*/
+iframe {
+    width: 22rem;
+    height: 20rem;
+}
+
+@media (orientation: landscape) {
+/*--- Titles ---*/
+h1 {
+    margin-top: 22vh;
+}
+
+/*--- Landing-page ---*/
+    .landing-page {
+        background-image: var(--landing-gradient-filter),
+        url("../assets/1117604-1920x1080-desktop-full-hd-aikido-wallpaper-image.jpg");
+    }
+
+    .citation-landing-page {
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+

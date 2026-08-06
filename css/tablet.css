@@ -1,0 +1,132 @@
+/* ------------ Tablet portrait ------------ */
+@media (min-width: 740px) {
+    h2 {
+        width: 93vw;
+        margin-top: 2rem;
+    }
+
+    /*--- Texts ---*/
+    .block-text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .block-text img {
+        width: 50vw;
+    }
+
+    .block-text p {
+        width: 20rem;
+        height: 18rem;
+    }
+
+    .block-text-img-right h2 {
+        order: 1;
+        text-align: left;
+    }
+
+    .block-text-img-left p {
+        text-align: left;
+    }
+
+    .block-text-img-right p {
+        order: 2;
+    }
+
+    .block-text-img-right img {
+        order: 3;
+    }
+
+    .block-text-img-left h2 {
+        text-align: right;
+    }
+
+    .block-text-center p {
+        width: 30rem;
+    }
+
+    /*--- hr ---*/
+    .small-hr-left {
+        display: block;
+        margin-right: 44vw;
+        width: 53vw;
+        background-color: var(--budo-red);
+        height: 0.2rem;
+        box-shadow: var(--box-shadow-element);
+        margin-top: 1.5rem;
+    }
+
+    .small-hr-right {
+        display: block;
+        margin-left: 45vw;
+        width: 53vw;
+        background-color: var(--budo-red);
+        height: 0.2rem;
+        box-shadow: var(--box-shadow-element);
+        margin-top: 1.5rem;
+    }
+
+    /*--- Cards ---*/
+    .block-card {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+
+    /*--- Forms ---*/
+    fieldset {
+        width: 40rem;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .submit-fieldset {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        width: 36rem;
+    }
+
+    .form-group input {
+        width: 17rem;
+    }
+
+    select, textarea {
+        width: 37rem;
+    }
+
+    input[type="submit"] {
+        width: 10rem;
+    }
+
+    /*--- Landing-page ---*/
+    .citation-landing-page {
+        margin-right: 43vw;
+    }
+
+    /*--- Info pratiques ---*/
+    iframe {
+        width: 44rem;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+    h1 {
+        margin-top: 12vh;
+    }
+
+    /*--- Info pratiques ---*/
+    iframe {
+        width: 60rem;
+        height: 25rem;
+    }
+}
+
+
+

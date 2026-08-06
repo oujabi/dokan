@@ -1,5 +1,6 @@
-'use strict'
+'use strict';
+import {mobileNav} from "./js/mobile-nav.js";
 
-import * as Global from './js/global';
-
-console.log("JS link")
+document.addEventListener('DOMContentLoaded', () => {
+    mobileNav();
+});

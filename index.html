@@ -3,18 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
+    <link href="main.css" rel="stylesheet">
     <title>Dokan, la voie de l'anneau</title>
 </head>
-<body>
-    <header class="banner">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+<body class="landing-page">
+    <header>
+        <a href="./index.html">
+            <img class="dokan-logo" src="./assets/logo-Dokan.png" alt="Logo Dokan" />
+        </a>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="./pages/dokan.html">Dokan</a>
+                </li>
+                <li>
+                    <a href="./pages/stages.html">Stages</a>
+                </li>
+                <li>
+                    <a href="./pages/medias.html">Médias</a>
+                </li>
+                <li>
+                    <a href="pages/contact.html">Contacts</a>
+                </li>
+                <li>
+                    <a href="./pages/infos-pratiques.html">Infos pratiques</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="burger-menu">
+            <div class="burger-menu-line"></div>
+            <div class="burger-menu-line"></div>
+            <div class="burger-menu-line"></div>
+        </div>
+        <div class="burger-menu-close">
+            <div class="burger-menu-line"></div>
+            <div class="burger-menu-line"></div>
+        </div>
+        <div class="burger-menu-close-area"></div>
     </header>
+
     <main>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+        <div class="citation-landing-page">
+            <p>L'Aïkidô est une voie qui permet de se découvrir soi-même et
+                de se construire en tant qu'être humain afin de vivre une vie pleine
+                et heureuse."
+            </p>
+            <span>Tamura Nobuyoshi</span>
+        </div>
+
+        <div class="button-wrapper-landing-page">
+            <button onclick="location.href='pages/dokan.html'">Entrer</button>
+        </div>
     </main>
+
     <footer>
-        <script src="main.js"></script>
+        <script type="module" src="main.js"></script>
     </footer>
 </body>
 </html>

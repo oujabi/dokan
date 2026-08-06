@@ -1,0 +1,91 @@
+@media (min-width: 1200px) {
+    /*--- Navigation ---*/
+    nav ul {
+        width: 35vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav ul li:hover {
+        color: var(--budo-red);
+
+    }
+
+    .active {
+        color: var(--budo-red);
+        font-size: 1.3rem;
+        font-weight: 800;
+        pointer-events: none;
+        top: 8px;
+        right: 3px;
+    }
+
+
+    .burger-menu, .burger-menu-close {
+        display: none;
+    }
+
+    .button-wrapper-landing-page button:hover {
+        cursor: pointer;
+        background-color: #E99800;
+        border-top: solid #333030 2px;
+        border-bottom: #333030 2px solid;
+        border-radius: 6px;
+        color: #333030;
+    }
+    /*--- Titles ---*/
+    h1 {
+        margin-top: 12vh;
+    }
+
+    h2 {
+        width: 90vw;
+    }
+
+    /*--- Texts ---*/
+    .block-text p {
+        width: 37rem;
+        height: 22rem;
+    }
+
+    .block-text-img-left h2 {
+        padding-left: 15rem;
+    }
+
+    .small-hr-left {
+        display: block;
+        margin-right: 45vw;
+        width: 50vw;
+        background-color: var(--budo-red);
+        height: 0.2rem;
+        box-shadow: var(--box-shadow-element);
+    }
+
+    .small-hr-right {
+        display: block;
+        margin-left: 45vw;
+        width: 50vw;
+        background-color: var(--budo-red);
+        height: 0.2rem;
+        box-shadow: var(--box-shadow-element);
+    }
+
+    /*--- cards ---*/
+    .block-card {
+        gap: 2rem;
+    }
+
+    /*--- Forms ---*/
+    input[type="submit"]:hover {
+        color: var(--gold-citation);
+        box-shadow: var(--box-shadow-hover-submit);
+        border: solid var(--gold-citation) 1px;
+    }
+
+    /*--- Info pratiques ---*/
+    iframe {
+        height: 35rem;
+    }
+}
+
