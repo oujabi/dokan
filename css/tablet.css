@@ -1,9 +1,8 @@
 /* ------------ Tablet portrait ------------ */
-@media (min-width: 768px) {
-    /*---Titles ---*/
+@media (min-width: 740px) {
     h2 {
-        width: 100vw;
-        margin-top: 2vh;
+        width: 93vw;
+        margin-top: 2rem;
     }
 
     /*--- Texts ---*/
@@ -26,7 +25,10 @@
     .block-text-img-right h2 {
         order: 1;
         text-align: left;
-        padding-left: 1.5rem;
+    }
+
+    .block-text-img-left p {
+        text-align: right;
     }
 
     .block-text-img-right p {
@@ -39,17 +41,21 @@
 
     .block-text-img-left h2 {
         text-align: right;
-        padding-right: 1rem;
     }
 
+    .block-text-center p {
+        width: 30rem;
+    }
+
+    /*--- hr ---*/
     .small-hr-left {
         display: block;
-        margin-right: 45vw;
+        margin-right: 44vw;
         width: 53vw;
         background-color: var(--budo-red);
         height: 0.2rem;
         box-shadow: var(--box-shadow-element);
-        margin-top: 2vh;
+        margin-top: 1.5rem;
     }
 
     .small-hr-right {
@@ -59,28 +65,51 @@
         background-color: var(--budo-red);
         height: 0.2rem;
         box-shadow: var(--box-shadow-element);
-        margin-top: 2vh;
+        margin-top: 1.5rem;
     }
 
     /*--- Cards ---*/
     .block-card {
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
-        width: 83vw;
+        flex-wrap: wrap;
+        gap: 3rem;
+        margin-top: 2rem;
     }
 
     /*--- Forms ---*/
+    fieldset {
+        width: 40rem;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    fieldset:last-child {
+        width: 37rem;
+        justify-content: flex-end;
+    }
+
+    fieldset:last-child {}
+
     .form-group input {
         width: 17rem;
     }
 
-    textarea {
-        width: 36rem;
+    select, textarea {
+        width: 37rem;
     }
 
     input[type="submit"] {
         width: 10rem;
     }
+
+    /*--- Landing-page ---*/
+    .citation-landing-page {
+        margin-right: 43vw;
+    }
+
 }
 
 

@@ -34,20 +34,15 @@
         border-radius: 6px;
         color: #333030;
     }
-
-    /*---Titles ---*/
-    h2 {
-        width: 100vw;
+    /*--- Titles ---*/
+    h1 {
+        margin-top: 12vh;
     }
 
     /*--- Texts ---*/
     .block-text p {
-        width: 40rem;
+        width: 37rem;
         height: 22rem;
-    }
-
-    .block-text-img-right h2 {
-        padding-left: 7.7rem;
     }
 
     .block-text-img-left h2 {
@@ -70,6 +65,11 @@
         background-color: var(--budo-red);
         height: 0.2rem;
         box-shadow: var(--box-shadow-element);
+    }
+
+    /*--- cards ---*/
+    .block-card {
+        gap: 2rem;
     }
 
     /*--- Forms ---*/
