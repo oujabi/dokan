@@ -39,6 +39,10 @@
         margin-top: 12vh;
     }
 
+    h2 {
+        width: 90vw;
+    }
+
     /*--- Texts ---*/
     .block-text p {
         width: 37rem;

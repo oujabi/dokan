@@ -19,7 +19,7 @@
 
     .block-text p {
         width: 20rem;
-        height: 15rem;
+        height: 18rem;
     }
 
     .block-text-img-right h2 {
@@ -28,7 +28,7 @@
     }
 
     .block-text-img-left p {
-        text-align: right;
+        text-align: left;
     }
 
     .block-text-img-right p {
