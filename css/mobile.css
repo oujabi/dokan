@@ -583,7 +583,7 @@ h1 {
 
     .landing-page {
         background-image: var(--landing-gradient-filter),
-        url("../assets/1117604-1920x1080-desktop-full-hd-aikido-wallpaper-image.jpg");
+        url("../assets/landing-page/aikidolandingpage.jpg");
     }
 
     .citation-landing-page {

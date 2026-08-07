@@ -16,26 +16,26 @@ app.use(cors({
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/')));
 
-// // Routes pour les pages sans extension
-// app.get('/dokan', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'pages', 'dokan.html'));
-// });
-//
-// app.get('/contact', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'pages', 'contact.html'));
-// });
-//
-// app.get('/infos-pratiques', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'pages', 'infos-pratiques.html'));
-// });
-//
-// app.get('/medias', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'pages', 'medias.html'));
-// });
-//
-// app.get('/stages', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'pages', 'stages.html'));
-// });
+// Routes pour les pages sans extension
+app.get('/dokan', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'dokan.html'));
+});
+
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'contact.html'));
+});
+
+app.get('/infos-pratiques', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'infos-pratiques.html'));
+});
+
+app.get('/medias', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'medias.html'));
+});
+
+app.get('/stages', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'stages.html'));
+});
 
 // Route pour la page d'accueil
 app.get('/', (req, res) => {
