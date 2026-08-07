@@ -386,22 +386,10 @@ hr {
     display: flex;
 }
 
-.open-toggle-left {
-    transform: rotate(45deg);
-    margin-right: -10px;
-}
-
-.open-toggle-right {
-    transform: rotate(-45deg);
-}
-
-.close-toggle-left {
-    transform: rotate(-45deg);
-    margin-right: -10px;
-}
-
-.close-toggle-right {
-    transform: rotate(45deg);
+.toggle-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #fdfdfd;
 }
 
 /*--- Médias ---*/
