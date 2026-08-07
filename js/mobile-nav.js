@@ -24,7 +24,7 @@ export const mobileNav = () => {
         document.querySelector('nav').classList.remove("mobile-nav");
         document.querySelector('nav ul').classList.remove("mobile-nav-list");
         document.querySelector('body').style.overflow = "visible";
-        document.querySelector('.dokan-logo').style.display = "block";
+        document.querySelector('.illustrations-logo').style.display = "block";
     }
     function openNav() {
         document.querySelector('.burger-menu').style.display = "none";
@@ -33,6 +33,6 @@ export const mobileNav = () => {
         document.querySelector('nav').classList.add("mobile-nav");
         document.querySelector('nav ul').classList.add("mobile-nav-list");
         document.querySelector('body').style.overflow = "hidden";
-        document.querySelector('.dokan-logo').style.display = "none";
+        document.querySelector('.illustrations-logo').style.display = "none";
     }
 }

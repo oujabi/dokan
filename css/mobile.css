@@ -144,14 +144,13 @@ nav ul {
 }
 
 nav ul li .active {
-    position: relative;
-    width: 82px;
-    top: 10px;
-    text-align: center;
-    height: 48px;
-    padding-top: 6px;
-    font-weight: 400;
     color: var(--budo-red);
+    position: relative;
+    top: 0.5rem;
+    right: 0.4rem;
+    text-align: center;
+    font-weight: 800;
+    pointer-events: none;
 }
 
 .mobile-nav {
@@ -282,11 +281,16 @@ hr {
 .block-logo {
     width: 20rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .block-logo img {
     width: 15rem;
+}
+
+.block-logo .logo-facebook, .block-logo .logo-instagram {
+    width: 4rem;
 }
 
 .block-logo a:nth-child(2) {
@@ -525,7 +529,7 @@ input[type="submit"]:invalid {
 .landing-page {
     background-image:
             var(--landing-gradient-filter),
-            url("../assets/tamurasensei.jpg");
+            url("../assets/landing-page/tamurasensei.jpg");
     background-size: cover;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
@@ -584,7 +588,7 @@ h1 {
 /*--- Landing-page ---*/
     .landing-page {
         background-image: var(--landing-gradient-filter),
-        url("../assets/1117604-1920x1080-desktop-full-hd-aikido-wallpaper-image.jpg");
+        url("../assets/landing-page/aikido-landing-page.jpg");
     }
 
     .citation-landing-page {

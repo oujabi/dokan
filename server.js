@@ -25,7 +25,7 @@ app.get('/api/data', (req, res) => {
 });
 
 app.post('/send-email', (req, res) => {
-    const to = "test@dokan.com";
+    const to = "test@illustrations.com";
     const { from, subject, text } = req.body;
     const transporter = nodemailer.createTransport({
         host: "sandbox.smtp.mailtrap.io",
