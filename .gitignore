@@ -1,6 +1,8 @@
 # Default ignored files
 /shelf/
 /.idea
+/.junie
+
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
@@ -8,4 +10,6 @@
 /dataSources.local.xml
 /.DS_Store
 
-/node_modules
+/.env
+
+/.node_modules

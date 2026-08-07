@@ -1,18 +1,16 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const app = express();
 const path = require('path');
-const PORT = 3000;
 const nodemailer = require('nodemailer');
 
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Servir les fichiers statiques (HTML, CSS, JS, images)
-app.use(express.static(path.join(__dirname, 'public')));
-
+// Configuration CORS
 app.use(cors({
-    origin: 'http://localhost:63342'
+    origin: process.env.ROOT, // Utilise HTTPS en production
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 // Route pour la page d'accueil
@@ -20,40 +18,54 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/api/data', (req, res) => {
-    res.json({ message: 'Hello from Dokan API!' });
+app.get('/config', async (req, res) => {
+    res.json({
+        root: process.env.ROOT,
+        smtpMailTo: process.env.SMTP_MAIL_TO
+    });
 });
 
-app.post('/send-email', (req, res) => {
-    const to = "test@illustrations.com";
-    const { from, subject, text } = req.body;
-    const transporter = nodemailer.createTransport({
-        host: "sandbox.smtp.mailtrap.io",
-        port: 2525,
-        auth: {
-            user: "acdcc46aada10b",
-            pass: "5b7c996edb894a"
+// Route pour /send-email
+app.post('/send-email', async (req, res) => {
+    try {
+        const { to, from, subject, text } = req.body;
+        if (!to || !from || !subject || !text) {
+            return res.status(400).json({ success: false, error: "Champs manquants" });
         }
-    });
 
-    const mailOptions = { from: from, to, subject, text };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error(error);
-            return res.status(500).json({success: false, error: error.toString()});
-        }
-        res.status(200).json({
-            success: true,
-            message: 'Email envoyé avec succès',
-            info: info.response
+        const transporter = nodemailer.createTransport({
+            host: process.env.SMTP_HOST,
+            port: process.env.SMTP_PORT,
+            auth: {
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASS,
+            },
         });
-    });
+
+        const mailOptions = { from, to, subject, text };
+        const info = await transporter.sendMail(mailOptions);
+
+        res.status(200).json({ success: true, message: "Email envoyé !", info });
+    } catch (error) {
+        console.error("Erreur SMTP :", error);
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+// Gestion des erreurs non capturées
+process.on('uncaughtException', (err) => {
+    console.error('Erreur non capturée :', err);
+    process.exit(1);
+});
+
+process.on('unhandledRejection', (err) => {
+    console.error('Promesse rejetée non capturée :', err);
+    process.exit(1);
 });
 
 // Démarrer le serveur
-app.listen(PORT, () => {
-    console.log(`Serveur démarré sur http://localhost:${PORT}`);
+app.listen(process.env.SERVER_PORT, () => {
+    console.log(`Serveur démarré sur ` + process.env.ROOT + ` }`);
 });
 
 
