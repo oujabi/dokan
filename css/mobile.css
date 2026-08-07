@@ -575,9 +575,15 @@ h1 {
 }
 
 /*--- Landing-page ---*/
+/*    .landing-page {*/
+/*        background-image: var(--landing-gradient-filter),*/
+/*        url("../assets/landing-page/aikidolandingpage.jpg");*/
+/*    }*/
+
+
     .landing-page {
         background-image: var(--landing-gradient-filter),
-        url("../assets/landing-page/tamurasensei.jpg");
+        url("../assets/1117604-1920x1080-desktop-full-hd-aikido-wallpaper-image.jpg");
     }
 
     .citation-landing-page {
