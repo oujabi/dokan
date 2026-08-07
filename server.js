@@ -16,19 +16,8 @@ app.use(cors({
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/')));
 
-app.get('/debug-paths', (req, res) => {
-    res.json({
-        dirname: __dirname,
-        cwd: process.cwd(),
-        indexExists: require('fs').existsSync(path.join(__dirname, 'index.html')),
-        pagesDirExists: require('fs').existsSync(path.join(__dirname, 'pages')),
-        indexPath: path.join(__dirname, 'index.html'),
-        dokanPath: path.join(__dirname, 'pages', 'dokan.html')
-    });
-});
-
 // Route pour la page d'accueil
-app.get(['/', '/index', '/index.html'], (req, res) => {
+app.get(['/', '/index'], (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
@@ -50,27 +39,6 @@ app.get('/medias', (req, res) => {
 });
 
 app.get('/stages', (req, res) => {
-    res.sendFile(path.join(__dirname, 'pages', 'stages.html'));
-});
-
-// Routes avec extension .html pour les liens directs
-app.get('/dokan.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'pages', 'dokan.html'));
-});
-
-app.get('/contact.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'pages', 'contact.html'));
-});
-
-app.get('/infos-pratiques.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'pages', 'infos-pratiques.html'));
-});
-
-app.get('/medias.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'pages', 'medias.html'));
-});
-
-app.get('/stages.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'stages.html'));
 });
 
