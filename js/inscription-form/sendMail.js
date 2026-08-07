@@ -29,8 +29,7 @@ export const sendMail = (formData) => {
     fetch('http://localhost:3000' + '/send-email', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify(emailData)
     }).then(response => {

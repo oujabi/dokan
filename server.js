@@ -13,6 +13,9 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
+app.use(express.json());
+app.use(express.static(path.join(__dirname, '/')));
+
 // Route pour la page d'accueil
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
