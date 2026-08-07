@@ -213,6 +213,7 @@ h1 {
 }
 
 h2 {
+    width: 100vw;
     font-family: var(--font-stack-title), sans-serif;
     text-align: center;
     font-weight: 800;
@@ -250,7 +251,7 @@ h3 {
 
 p {
     font-family: var(--font-stack-text), sans-serif;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-top: 0.3rem;
     padding: 0.5rem;
     text-align: justify;

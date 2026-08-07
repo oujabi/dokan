@@ -1,42 +1,34 @@
 /* ------------ Tablet portrait ------------ */
 @media (min-width: 740px) {
     h2 {
-        width: 93vw;
+        width: 95vw;
         margin-top: 2rem;
     }
 
     /*--- Texts ---*/
-    .block-text {
+    .block-text div {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 2rem;
     }
 
-    .block-text img {
+    .block-text div img {
         width: 50vw;
     }
 
-    .block-text p {
-        width: 20rem;
-        height: 18rem;
+    .block-text div p {
+        vertical-align: top;
+        width: 45vw;
     }
 
     .block-text-img-right h2 {
-        order: 1;
         text-align: left;
     }
 
     .block-text-img-left p {
         text-align: left;
-    }
-
-    .block-text-img-right p {
-        order: 2;
-    }
-
-    .block-text-img-right img {
-        order: 3;
     }
 
     .block-text-img-left h2 {
