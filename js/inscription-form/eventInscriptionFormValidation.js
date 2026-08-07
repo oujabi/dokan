@@ -5,12 +5,16 @@ const eventInscriptionFormValidation = () => {
     //Send email form inscriptions.
     const inscriptionForm = document.querySelector(".formulaire-inscription");
     if (!inscriptionForm) return;
-    inscriptionForm.addEventListener('submit', (event) => {
+    inscriptionForm.addEventListener('submit', async (event) => {
         event.preventDefault();
         formInscriptionValidity();
         if (inscriptionForm.checkValidity()) {
             const formData = new FormData(inscriptionForm);
-            sendMail(formData);
+            try {
+                await sendMail(formData);
+            } catch (error) {
+                console.error('Erreur lors de l\'envoi du mail:', error);
+            }
         }
     })
 
