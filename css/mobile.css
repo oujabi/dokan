@@ -577,11 +577,7 @@ h1 {
 /*--- Landing-page ---*/
     .landing-page {
         background-image: var(--landing-gradient-filter),
-        url("../assets/landing-page/aikidolandingpage.jpg");
-        background-size: cover;
-        background-blend-mode: hard-light;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        url("../assets/landing-page/tamurasensei.jpg");
     }
 
     .citation-landing-page {
