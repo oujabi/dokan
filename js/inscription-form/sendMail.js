@@ -7,11 +7,16 @@ const loadConfig = () => {
         configPromise = fetch('/config')
             .then(r => {
                 if (!r.ok) {
-                    throw new Error(`Failed to load config: ${r.status} ${r.statusText}`);
+                    return r.json().then(err => {
+                        throw new Error(`Failed to load config: ${r.status} ${r.statusText} - ${err.error || JSON.stringify(err)}`);
+                    }).catch(() => {
+                        throw new Error(`Failed to load config: ${r.status} ${r.statusText}`);
+                    });
                 }
                 return r.json();
             })
             .then(c => { 
+                console.log('Configuration chargée:', c);
                 config = c; 
                 return c; 
             });
@@ -34,8 +39,13 @@ export const sendMail = async (formData) => {
             await loadConfig();
         }
 
-        if (!config || !config.root || !config.smtpMailTo) {
-            throw new Error("Configuration incomplète: root ou smtpMailTo manquant");
+        if (!config) {
+            throw new Error("Configuration non chargée: la requête /config a échoué");
+        }
+
+        if (!config.root || !config.smtpMailTo) {
+            console.error('Configuration reçue du serveur:', config);
+            throw new Error(`Configuration incomplète: root="${config.root}", smtpMailTo="${config.smtpMailTo}"`);
         }
 
         // Frontend Script: Sending email data to backend

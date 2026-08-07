@@ -11,6 +11,7 @@ app.use(cors({
     origin: process.env.ROOT,
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
 }));
 
 app.use(express.json());
@@ -44,6 +45,22 @@ app.get('/', (req, res) => {
 
 // Route de configuration
 app.get('/config', async (req, res) => {
+    console.log('Config request - ROOT:', process.env.ROOT, 'SMTP_MAIL_TO:', process.env.SMTP_MAIL_TO);
+    
+    if (!process.env.ROOT || !process.env.SMTP_MAIL_TO) {
+        console.error('Configuration manquantes:', {
+            ROOT: process.env.ROOT,
+            SMTP_MAIL_TO: process.env.SMTP_MAIL_TO
+        });
+        return res.status(500).json({
+            error: 'Configuration serveur incomplète',
+            missing: {
+                root: !process.env.ROOT,
+                smtpMailTo: !process.env.SMTP_MAIL_TO
+            }
+        });
+    }
+    
     res.json({
         root: process.env.ROOT,
         smtpMailTo: process.env.SMTP_MAIL_TO

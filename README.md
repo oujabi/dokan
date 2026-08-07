@@ -143,6 +143,9 @@ pm2 start
 
 ---
 
+### ecosystem.config.js
+En production appliquer les variables du fichier .env dans l'objet env du fichier ecosystem.config.js
+
 ## Fonctionnalités
 
 - **Pages statiques** : Accueil, Dojo, Stages, Médias, Contact, Infos pratiques
