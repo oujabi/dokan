@@ -577,7 +577,7 @@ h1 {
 /*--- Landing-page ---*/
     .landing-page {
         background-image: var(--landing-gradient-filter),
-        url("../assets/landing-page/aikido-landing-page.jpg");
+        url("../assets/landing-page/aikidolandingpage.jpg");
         background-size: cover;
         background-blend-mode: hard-light;
         background-repeat: no-repeat;
