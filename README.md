@@ -123,6 +123,10 @@ npm install -g pm2
 pm2 start server.js --name dokan
 pm2 save
 pm2 startup
+#ou
+pm2 restart ecosystem.config.js
+# ou
+pm2 start ecosystem.config.js
 ```
 
 ---

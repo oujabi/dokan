@@ -8,7 +8,7 @@ const nodemailer = require('nodemailer');
 
 // Configuration CORS
 app.use(cors({
-    origin: process.env.ROOT, // Utilise HTTPS en production
+    origin: process.env.ROOT,
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
@@ -16,23 +16,23 @@ app.use(cors({
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/')));
 
-// Route pour la page d'accueil
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-app.get('/config', async (req, res) => {
+app.get('/debug-paths', (req, res) => {
     res.json({
-        root: process.env.ROOT,
-        smtpMailTo: process.env.SMTP_MAIL_TO
+        dirname: __dirname,
+        cwd: process.cwd(),
+        indexExists: require('fs').existsSync(path.join(__dirname, 'index.html')),
+        pagesDirExists: require('fs').existsSync(path.join(__dirname, 'pages')),
+        indexPath: path.join(__dirname, 'index.html'),
+        dokanPath: path.join(__dirname, 'pages', 'dokan.html')
     });
 });
 
-// Servir les pages HTML sans l'extension .html
-app.get(['/', '/index'], (req, res) => {
+// Route pour la page d'accueil
+app.get(['/', '/index', '/index.html'], (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// Routes pour les pages sans extension
 app.get('/dokan', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'dokan.html'));
 });
@@ -51,6 +51,35 @@ app.get('/medias', (req, res) => {
 
 app.get('/stages', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'stages.html'));
+});
+
+// Routes avec extension .html pour les liens directs
+app.get('/dokan.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'dokan.html'));
+});
+
+app.get('/contact.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'contact.html'));
+});
+
+app.get('/infos-pratiques.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'infos-pratiques.html'));
+});
+
+app.get('/medias.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'medias.html'));
+});
+
+app.get('/stages.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'stages.html'));
+});
+
+// Route de configuration
+app.get('/config', async (req, res) => {
+    res.json({
+        root: process.env.ROOT,
+        smtpMailTo: process.env.SMTP_MAIL_TO
+    });
 });
 
 // Route pour /send-email
