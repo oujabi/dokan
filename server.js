@@ -109,6 +109,10 @@ app.post('/send-email', async (req, res) => {
     }
 });
 
+app.use((req, res) => {
+    res.status(404).send('404 - Page non trouvée');
+});
+
 // Gestion des erreurs non capturées
 process.on('uncaughtException', (err) => {
     console.error('Erreur non capturée :', err);
