@@ -1,12 +1,12 @@
-// let config = null;
-//
-// // Chargez la configuration dès que possible
-// fetch('/config')
-//     .then(r => r.json())
-//     .then(c => { config = c; });
+let config = null;
+
+// Chargez la configuration dès que possible
+fetch('/config')
+    .then(r => r.json())
+    .then(c => { config = c; });
 
 export const sendMail = (formData) => {
-    // if (!config) throw new Error("Configuration non chargée");
+    if (!config) throw new Error("Configuration non chargée");
 
     // Frontend Script: Sending email data to backend
     const message = formData.get('message')
@@ -18,7 +18,7 @@ export const sendMail = (formData) => {
 
     const emailData = {
         from: formData.get('prenom') +" "+ formData.get('nom') + " " + "<"+formData.get('email')+">",
-        to: "test@test.com",
+        to: config.smtpMailTo,
         subject: formData.get('object'),
         text: message
     };
@@ -26,7 +26,7 @@ export const sendMail = (formData) => {
     const infoValidSubmit = document.querySelector('.info-valid');
     const infoInvalidSubmit = document.querySelector('.info-invalid');
 
-    fetch('http://localhost:3000' + '/send-email', {
+    fetch(config.root + '/send-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
