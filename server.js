@@ -16,11 +16,6 @@ app.use(cors({
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/')));
 
-// Route pour la page d'accueil
-app.get(['/', '/index'], (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
 // Routes pour les pages sans extension
 app.get('/dokan', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'dokan.html'));
@@ -40,6 +35,11 @@ app.get('/medias', (req, res) => {
 
 app.get('/stages', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'stages.html'));
+});
+
+// Route pour la page d'accueil
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Route de configuration
