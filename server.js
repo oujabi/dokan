@@ -28,6 +28,31 @@ app.get('/config', async (req, res) => {
     });
 });
 
+// Servir les pages HTML sans l'extension .html
+app.get(['/', '/index'], (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('/dokan', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'dokan.html'));
+});
+
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'contact.html'));
+});
+
+app.get('/infos-pratiques', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'infos-pratiques.html'));
+});
+
+app.get('/medias', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'medias.html'));
+});
+
+app.get('/stages', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'stages.html'));
+});
+
 // Route pour /send-email
 app.post('/send-email', async (req, res) => {
     try {
