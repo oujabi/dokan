@@ -3,6 +3,7 @@
     h2 {
         width: 95vw;
         margin-top: 2rem;
+        margin-left: 5rem;
     }
 
     /*--- Texts ---*/
@@ -11,11 +12,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 2rem;
-    }
-
-    .block-text div img {
-        width: 50vw;
+        gap: 10vw;
     }
 
     .block-text div p {
@@ -25,15 +22,24 @@
 
     .block-text-img-right h2 {
         text-align: left;
+        margin-left: 25vw;
     }
 
-    .block-text-img-left p {
+    .block-text-img-right p {
+        order: 1;
         text-align: left;
     }
 
-    .block-text-img-left h2 {
-        text-align: right;
+    .block-text-img-right img {
+        order: 2
     }
+
+    .block-text-img-left h2 {
+        text-align: left;
+        margin-left: 20vw;
+        width: 33vw;
+    }
+
 
     .block-text-center p {
         width: 30rem;

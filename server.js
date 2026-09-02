@@ -22,6 +22,14 @@ app.get('/aikido', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'aikido.html'));
 })
 
+app.get('/ffab', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'ffab.html'));
+})
+
+app.get('/eurasia', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'eurasia.html'));
+})
+
 // app.get('/dokan', (req, res) => {
 //     res.sendFile(path.join(__dirname, 'pages', 'dokan.html'));
 // });

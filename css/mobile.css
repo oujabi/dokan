@@ -235,6 +235,11 @@ h3 {
     align-items: center;
 }
 
+.block-text a {
+    color: cornflowerblue;
+    text-decoration: underline;
+}
+
 .block-text-center {
     display: flex;
     flex-direction: column;
