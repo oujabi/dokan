@@ -1,39 +1,34 @@
 require('dotenv').config();
 
 const express = require('express');
-const cors = require('cors');
 const app = express();
 const path = require('path');
 const nodemailer = require('nodemailer');
 
-// Configuration CORS
-app.use(cors({
-    origin: process.env.ROOT,
-    methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
-}));
+// Suppression des headers CORS envoyés par Node.js (pour éviter les doublons)
+app.use((req, res, next) => {
+    res.removeHeader('Access-Control-Allow-Origin');
+    res.removeHeader('Access-Control-Allow-Credentials');
+    res.removeHeader('Vary');
+    next();
+});
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/')));
 
-// Routes pour les pages sans extension
+// Routes pour les pages
 app.get('/aikido', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'aikido.html'));
-})
+});
 
 app.get('/ffab', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'ffab.html'));
-})
+});
 
 app.get('/eurasia', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'eurasia.html'));
-})
+});
 
-// app.get('/dokan', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'pages', 'dokan.html'));
-// });
-//
 app.get('/contact', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'pages', 'contact.html'));
 });
@@ -42,23 +37,13 @@ app.get('/infos-pratiques', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'pages', 'infos-pratiques.html'));
 });
 
-// app.get('/medias', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'pages', 'medias.html'));
-// });
-//
-// app.get('/stages', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'pages', 'stages.html'));
-// });
-
-// Route pour la page d'accueil
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Route de configuration
+// Route /config
 app.get('/config', async (req, res) => {
     console.log('Config request - ROOT:', process.env.ROOT, 'SMTP_MAIL_TO:', process.env.SMTP_MAIL_TO);
-    
     if (!process.env.ROOT || !process.env.SMTP_MAIL_TO) {
         console.error('Configuration manquantes:', {
             ROOT: process.env.ROOT,
@@ -72,14 +57,13 @@ app.get('/config', async (req, res) => {
             }
         });
     }
-    
     res.json({
         root: process.env.ROOT,
         smtpMailTo: process.env.SMTP_MAIL_TO
     });
 });
 
-// Route pour /send-email
+// Route /send-email
 app.post('/send-email', async (req, res) => {
     try {
         const { to, from, subject, text } = req.body;
@@ -110,7 +94,7 @@ app.use((req, res) => {
     res.status(404).send('404 - Page non trouvée');
 });
 
-// Gestion des erreurs non capturées
+// Gestion des erreurs
 process.on('uncaughtException', (err) => {
     console.error('Erreur non capturée :', err);
     process.exit(1);
@@ -123,8 +107,5 @@ process.on('unhandledRejection', (err) => {
 
 // Démarrer le serveur
 app.listen(process.env.SERVER_PORT, () => {
-    console.log(`Serveur démarré sur ` + process.env.ROOT + ` }`);
+    console.log(`Serveur démarré sur ${process.env.ROOT}`);
 });
-
-
-
