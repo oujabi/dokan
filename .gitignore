@@ -10,6 +10,6 @@
 /dataSources.local.xml
 /.DS_Store
 
-/.env
+.env
 /.github
 /node_modules
