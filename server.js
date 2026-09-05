@@ -21,6 +21,11 @@ app.get('/aikido', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'aikido.html'));
 });
 
+app.get('/dokan', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'dokan.html'));
+});
+
+
 app.get('/ffab', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'ffab.html'));
 });
@@ -29,9 +34,9 @@ app.get('/eurasia', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'eurasia.html'));
 });
 
-app.get('/contact', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'pages', 'contact.html'));
-});
+// app.get('/contact', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'pages', 'contact.html'));
+// });
 
 app.get('/infos-pratiques', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'pages', 'infos-pratiques.html'));
