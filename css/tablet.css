@@ -75,33 +75,6 @@
         margin-top: 2rem;
     }
 
-    /*--- Forms ---*/
-    fieldset {
-        width: 40rem;
-        flex-direction: row;
-        justify-content: center;
-        gap: 3rem;
-    }
-
-    .submit-fieldset {
-        display: flex;
-        flex-direction: row;
-        justify-content: right;
-        width: 36rem;
-    }
-
-    .form-group input {
-        width: 17rem;
-    }
-
-    select, textarea {
-        width: 37rem;
-    }
-
-    input[type="submit"] {
-        width: 10rem;
-    }
-
     /*--- Landing-page ---*/
     .citation-landing-page {
         margin-right: 43vw;

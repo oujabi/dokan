@@ -55,13 +55,6 @@
         gap: 2rem;
     }
 
-    /*--- Forms ---*/
-    input[type="submit"]:hover {
-        color: var(--gold-citation);
-        box-shadow: var(--box-shadow-hover-submit);
-        border: solid var(--gold-citation) 1px;
-    }
-
     /*--- Info pratiques ---*/
     iframe {
         height: 35rem;
