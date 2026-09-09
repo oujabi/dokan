@@ -19,11 +19,6 @@
         width: 45vw;
     }
 
-    .block-text-img-right h2 {
-        text-align: left;
-        margin-left: 25vw;
-    }
-
     .block-text-img-right p, .block-text-img-right .multi-p {
         order: 1;
         text-align: left;
@@ -32,13 +27,6 @@
     .block-text-img-right img {
         order: 2
     }
-
-    .block-text-img-left h2 {
-        text-align: left;
-        margin-left: 40vw;
-        width: 47vw;
-    }
-
 
     .block-text-center p {
         width: 30rem;
