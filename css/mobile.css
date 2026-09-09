@@ -283,6 +283,10 @@ hr {
     box-shadow: var(--box-shadow-element);
 }
 
+ul {
+    margin-left: 1rem;
+}
+
 /*--- Logo ---*/
 .block-logo {
     width: 20rem;
