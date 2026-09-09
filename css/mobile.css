@@ -283,7 +283,8 @@ hr {
     box-shadow: var(--box-shadow-element);
 }
 
-ul {
+.multi-p ul {
+    width: 20rem;
     margin-left: 1rem;
 }
 
